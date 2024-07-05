@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
       </Head>
-      <Nav />
+      {/* <Nav /> */}
       <Component {...pageProps} />
     </>
   );
