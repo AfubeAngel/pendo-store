@@ -19,15 +19,18 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       showStatus={false}
       showThumbs={false}
       autoPlay={true}
-      interval={3000} // Adjust interval as needed (in milliseconds)
+      interval={2000}
       infiniteLoop={true}
+      centerSlidePercentage={90}
+      centerMode={true}
     >
       {items.map((item, index) => (
-        <div key={index} className="relative flex  w-full bg-red-400 p-8">
-          <img src={item.imageSrc} alt={item.title} className="w-full " />
-          <div className="absolute left-[43px] bottom-[-43px] transform -translate-y-1/2 bg-opacity-50 text-white max-w-[518px] ">
+        <div key={index} className="relative w-full pr-6">
+          <img src={item.imageSrc} alt={item.title} className="w-full lg:max-w-full" />
+          <div className="absolute flex flex-col items-start left-[83px] bottom-[28px] 
+          transform -translate-y-1/2 bg-opacity-50 text-white max-w-[518px] mx-h-[484px] ">
             <h3 className="text-xl font-bold">{item.title}</h3>
-            <p className="mt-2">{item.subtext}</p>
+            <p className="mt-2 text-start">{item.subtext}</p>
           </div>
         </div>
       ))}
