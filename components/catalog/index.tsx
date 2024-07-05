@@ -4,7 +4,7 @@ import products from '../../fixtures/productdetails.json';
 
 const Catalog: React.FC = () => {
   return (
-    <div className="container mx-auto p-8">
+    <div className="container mx-auto xl:mb-[102.68px] p-8">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold xl:mb-[85px] ">Catalog</h2>
         <div className="flex items-center">
