@@ -23,8 +23,8 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       infiniteLoop={true}
     >
       {items.map((item, index) => (
-        <div key={index} className="relative flex gap-4 justify-start w-full">
-          <img src={item.imageSrc} alt={item.title} className="w-full lg:max-w-[1118px] lg:h-[484px] " />
+        <div key={index} className="relative flex  w-full bg-red-400 p-8">
+          <img src={item.imageSrc} alt={item.title} className="w-full " />
           <div className="absolute left-[43px] bottom-[-43px] transform -translate-y-1/2 bg-opacity-50 text-white max-w-[518px] ">
             <h3 className="text-xl font-bold">{item.title}</h3>
             <p className="mt-2">{item.subtext}</p>
