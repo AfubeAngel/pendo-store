@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Nav() {
   return (
     <nav className="flex justify-between items-center p-4 lg:p-8 text-black h-20 ">
-      <div className="lg:text-[48px] text-3xl font-bold text-green-900 kavoon-font">pendo</div>
+      <div className="lg:text-[48px] text-3xl font-bold text-[#60781C] kavoon-font">pendo</div>
       <div className="flex space-x-4">
         <ul className="flex gap-4">
           <li className="p-6 text-2xl">
