@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "imageSrc": "/catalog1.png",
+    "productName": "Product 1",
+    "starRating": 4.5,
+    "price": 99.99
+  },
+  {
+    "id": 2,
+    "imageSrc": "/catalog2.png",
+    "productName": "Product 2",
+    "starRating": 3.8,
+    "price": 79.99
+  },
+  {
+    "id": 3,
+    "imageSrc": "/catalog3.png",
+    "productName": "Product 3",
+    "starRating": 4.2,
+    "price": 129.99
+  },
+  {
+    "id": 4,
+    "imageSrc": "/catalog4.png",
+    "productName": "Product 4",
+    "starRating": 4.0,
+    "price": 89.99
+  },
+  {
+    "id": 5,
+    "imageSrc": "/catalog1.png",
+    "productName": "Product 5",
+    "starRating": 4.7,
+    "price": 149.99
+  },
+  {
+    "id": 6,
+    "imageSrc": "/catalog2.png",
+    "productName": "Product 6",
+    "starRating": 4.3,
+    "price": 109.99
+  },
+  {
+    "id": 7,
+    "imageSrc": "/catalog3.png",
+    "productName": "Product 7",
+    "starRating": 3.9,
+    "price": 69.99
+  },
+  {
+    "id": 8,
+    "imageSrc": "/catalog4.png",
+    "productName": "Product 8",
+    "starRating": 4.6,
+    "price": 119.99
+  },
+  {
+    "id": 9,
+    "imageSrc": "/catalog1.png",
+    "productName": "Product 9",
+    "starRating": 4.1,
+    "price": 99.99
+  },
+  {
+    "id": 10,
+    "imageSrc": "/catalog2.png",
+    "productName": "Product 10",
+    "starRating": 4.4,
+    "price": 139.99
+  },
+  {
+    "id": 11,
+    "imageSrc": "/catalog3.png",
+    "productName": "Product 11",
+    "starRating": 4.8,
+    "price": 159.99
+  },
+  {
+    "id": 12,
+    "imageSrc": "/catalog4.png",
+    "productName": "Product 12",
+    "starRating": 3.7,
+    "price": 59.99
+  },
+  {
+    "id": 13,
+    "imageSrc": "/catalog1.png",
+    "productName": "Product 13",
+    "starRating": 4.2,
+    "price": 109.99
+  },
+  {
+    "id": 14,
+    "imageSrc": "/catalog2.png",
+    "productName": "Product 14",
+    "starRating": 4.5,
+    "price": 119.99
+  },
+  {
+    "id": 15,
+    "imageSrc": "/catalog3.png",
+    "productName": "Product 15",
+    "starRating": 4.6,
+    "price": 129.99
+  }
+]
