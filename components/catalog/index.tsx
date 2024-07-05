@@ -27,6 +27,7 @@ const Catalog: React.FC = () => {
             productName={product.productName}
             starRating={product.starRating}
             price={product.price}
+            productDetail ={product.productDetail}
           />
         ))}
       </div>

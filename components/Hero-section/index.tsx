@@ -20,7 +20,7 @@ export default function Hero() {
     </div>
     <div className="lg:w-[578px] lg:h-[605px] lg:mt-[116px]">
     <Image
-      src="/hero-product.png"
+      src="/images/hero-product.png"
       width={1000}
       height={1000}
       alt="herosection-product"

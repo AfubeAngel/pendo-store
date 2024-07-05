@@ -4,17 +4,17 @@ import Link from "next/link";
 
 const bestsellers = [
   {
-    imageSrc: '/bestseller1.png',
+    imageSrc: '/images/bestseller1.png',
     title: 'Savanna Sofa',
     subtext: 'Made from rich mahogany wood with tribal-inspired patterns, it invites you to embrace comfort infused with the essence of Africa.',
   },
   {
-    imageSrc: '/bestseller2.png',
+    imageSrc: '/images/bestseller2.png',
     title: 'Baobab Sofa',
     subtext: "Our Timber carved  sofas are not just pieces of furniture; they're crafted from sustainable tree wood, each detail carefully chosen to bring nature's warmth and beauty into your home. ",
   },
   {
-    imageSrc: '/bestseller3.png',
+    imageSrc: '/images/bestseller3.png',
     title: 'Zephyr Sofa',
     subtext: 'Featuring sleek ebony wood accents and luxurious leather upholstery, it combines modern elegance with traditional craftsmanship for a sophisticated living space.',
   },
