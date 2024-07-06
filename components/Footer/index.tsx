@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col xl:gap-[115px] bg-[#60781C] text-white py-8 xl:pl-[121px] xl:pr-[155px] xl:pt-[103px] ">
+    <footer className="flex flex-col xl:gap-[115px] bg-primarycolor text-white py-8 xl:pl-[121px] xl:pr-[155px] xl:pt-[103px] ">
       <div className="container mx-auto px-4 flex flex-col lg:flex-row xl:gap-[166px] ">
         {/* Left Section */}
         <div className="lg:max-w-[483px] mb-8 lg:mb-0">

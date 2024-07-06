@@ -146,7 +146,7 @@ const DeliveryDetails: React.FC = () => {
         </div>
         <button
           type="submit"
-          className="bg-[#60781C] text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+          className="bg-primarycolor text-white px-4 py-2 rounded-lg hover:bg-blue-600"
         >
           Submit
         </button>

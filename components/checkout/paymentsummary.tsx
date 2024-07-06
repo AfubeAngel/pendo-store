@@ -32,7 +32,7 @@ const PaymentSummary: React.FC = () => {
         <p className="text-xl font-bold">${total.toFixed(2)}</p>
       </div>
       <button
-        className="mt-4 bg-[#60781C] text-white px-4 py-2 rounded-lg hover:bg-blue-600 w-full"
+        className="mt-4 bg-primarycolor text-white px-4 py-2 rounded-lg hover:bg-blue-600 w-full"
         onClick={handlePayNow}
       >
         Pay Now

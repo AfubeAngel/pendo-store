@@ -23,7 +23,7 @@ const bestsellers = [
 
 const BestsellersSection: React.FC = () => {
   return (
-    <section className=" bg-white xl:mt-[174px] xl:mb-[197px] ">
+    <section className=" bg-white mt-20 xl:mt-[127px] xl:mb-[197px] ">
       <div className="flex justify-between items-center mb-4  xl:mb-20 xl:mx-[110px] ">
         <h2 className="text-2xl font-bold">Bestsellers</h2>
         <Link href="#" className="text-blue-500">See All</Link>
