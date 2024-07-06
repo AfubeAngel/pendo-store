@@ -4,7 +4,7 @@
       "image": "/images/cart1.png",
       "name": "Savanna Sofa",
       "details": "Comfortable and stylish sofa",
-      "price": 499.99,
+      "price": "250,000",
       "quantity": 1
     },
     {
@@ -12,7 +12,7 @@
       "image": "/images/cart2.png",
       "name": "Baobab Sofa",
       "details": "Elegant and durable sofa",
-      "price": 699.99,
+      "price": "300,000",
       "quantity": 2
     },
     {
@@ -20,7 +20,23 @@
         "image": "/images/cart3.png",
         "name": "Logan Sofa",
         "details": "Elegant and strong sofa",
-        "price": 896.99,
-        "quantity": 3
+        "price": "65,000",
+        "quantity": 1
+    },
+    {
+      "id": 2,
+      "image": "/images/cart4.png",
+      "name": "Serengeti",
+      "details": "Wool cushion with wooden base",
+      "price": "65,000",
+      "quantity": 1
+    },
+    {
+        "id": 3,
+        "image": "/images/cart5.png",
+        "name": "Timbuktu",
+        "details": "Wooden living room armchair",
+        "price": "65,000",
+        "quantity": 2
     }
   ]

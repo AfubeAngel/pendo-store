@@ -7,38 +7,33 @@ interface CartItemProps {
     image: string;
     name: string;
     details: string;
-    price: number;
+    price: string;
     quantity: number;
   };
 }
 
 const CartItem: React.FC<CartItemProps> = ({ item }) => {
   return (
-    <section className="flex justify-between items-center py-4 border-b">
-      <div className="flex items-center space-x-[50px]">
+    <section className="flex justify-between items-start lg:items-center pb-6 border-b">
+      <div className="flex space-x-4 lg:space-x-[50px]">
         <Image src={item.image} alt={item.name} width={100} height={100} className="w-24 h-24 object-cover" />
-        <div>
-          <h3 className="text-lg font-semibold">{item.name}</h3>
-          <p className="text-gray-500">{item.details}</p>
-          <p>In Stock</p>
-          <div className='flex gap-2'>
-          <Image src="/icons/wishlist.svg" alt="Wishlist icon" width={24} height={24} />
-          <p>{item.quantity}</p>
-          <Image src="/icons/wishlist.svg" alt="Wishlist icon" width={24} height={24} />
-          </div>
+        <div className='flex flex-col gap-2 w-[106px] lg:w-full'>
+          <h3 className="text-[20px] font-medium">{item.name}</h3>
+          <p className="text-sm">{item.details}</p>
+          <p className="text-sm font-medium"><span>Qty: </span>{item.quantity}</p>
         </div>
       </div>
-      <div className="flex flex-col gap-6 items-center">
+      <div className="flex flex-col gap-6 items-start lg:items-center">
         <p className="text-lg font-semibold">N{item.price}</p>
-        <div className='flex gap-1'>
-        <button aria-label="Add to wishlist" className='flex'>
-        <Image src="/icons/wishlist.svg" alt="Wishlist icon" width={24} height={24} />
-        <p className="text-blue-500">Save for later</p>
+        <div className='hidden lg:flex gap-1'>
+        <button aria-label="Add to wishlist" className='flex gap-[19px] '>
+        <Image src="/icons/wishlist-blank.svg" alt="Wishlist icon" width={24} height={24} />
+        <p className="font-base font-medium">Save</p>
         </button>
-        <p>|</p>
-        <button aria-label="Add to wishlist" className='flex'>
-        <Image src="/icons/wishlist.svg" alt="Wishlist icon" width={24} height={24} />
-        <p className="text-red-500">Remove</p>
+        <p className='mx-2'>|</p>
+        <button aria-label="Add to wishlist" className='flex gap-4'>
+        <Image src="/icons/delete-trash.svg" alt="delete icon" width={24} height={24} />
+        <p className="font-base font-medium">Delete</p>
         </button>
         </div>
       </div>

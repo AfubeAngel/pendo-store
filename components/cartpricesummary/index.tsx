@@ -1,44 +1,68 @@
-import React from 'react';
-import cartSummary from '@/fixtures/cartSummary.json';
-import { useRouter } from 'next/router';
+import React from "react";
+import cartSummary from "@/fixtures/cartSummary.json";
+import { useRouter } from "next/router";
+import Image from "next/image";
+
 
 const CartSummary: React.FC = () => {
-    const router = useRouter();
-    const subtotal = cartSummary.subtotal;
-    const tax = subtotal * cartSummary.taxRate;
-    const shipping = cartSummary.shipping;
-    const total = subtotal + tax + shipping;
+  const router = useRouter();
+  const subtotal = cartSummary.subtotal;
+  const tax = subtotal * cartSummary.taxRate;
+  const shipping = cartSummary.shipping;
+  const total = subtotal + tax + shipping;
 
   const handleContinueToPayment = () => {
-    router.push('/checkout');
+    router.push("/checkout");
   };
 
   const handleContinueShopping = () => {
-    router.push('/');
+    router.push("/");
   };
 
   return (
-    <div className="mt-8 p-4 bg-gray-100 rounded-lg xl:w-[439px] ">
-      <div className="flex justify-between items-center border-b pb-2">
-        <p className="text-lg">Subtotal:</p>
-        <p className="text-lg">${subtotal.toFixed(2)}</p>
+    <div className="p-4 w-[360px] xl:w-[517px] ">
+      <div className="flex justify-between items-center pb-2">
+        <p className="text-base">Subtotal:</p>
+        <p className="text-base">N{subtotal.toFixed(2)}</p>
       </div>
-      <div className="flex justify-between items-center border-b py-2">
-        <p className="text-lg">Tax:</p>
-        <p className="text-lg">${tax.toFixed(2)}</p>
+      <div className="flex justify-between items-center py-2">
+        <p className="text-base">Tax:</p>
+        <p className="text-base">N{tax.toFixed(2)}</p>
       </div>
-      <div className="flex justify-between items-center border-b py-2">
-        <p className="text-lg">Shipping:</p>
-        <p className="text-lg">${shipping.toFixed(2)}</p>
+      <div className="flex justify-between items-center py-2">
+        <p className="text-base">Shipping:</p>
+        <p className="text-base">N{shipping.toFixed(2)}</p>
       </div>
       <div className="flex justify-between items-center pt-2">
-        <p className="text-xl font-bold">Total:</p>
-        <p className="text-xl font-bold">${total.toFixed(2)}</p>
+        <p className="text-base font-bold">Total:</p>
+        <p className="text-base font-bold">N{total.toFixed(2)}</p>
       </div>
 
-      <div className="mt-8 flex justify-between">
-        <button className="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600" onClick={handleContinueShopping}>Continue Shopping</button>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600" onClick={handleContinueToPayment}>Continue to payment</button>
+      <div className="mt-8 flex gap-8 justify-between">
+        <button
+          className="bg-white border-black flex py-[14px] lg:py-2 px-4 gap-4 items-center w-[236px] font-base tracking-wider rounded-lg h-14 text-black border"
+          onClick={handleContinueShopping}
+        >
+          <Image
+            src="/icons/leftarrow.svg"
+            width={24}
+            height={24}
+            alt="Instagram"
+            />
+          Continue shopping
+        </button>
+        <button
+          className="bg-primarycolor border-black flex py-[14px] lg:py-2 px-4 gap-4 items-center w-[236px] h-14 font-base tracking-wider text-white rounded-lg hover:text-primarycolor hover:bg-white"
+          onClick={handleContinueToPayment}
+          >
+          Continue to payment
+          <Image
+                src="/icons/Vector.svg"
+                width={9}
+                height={9}
+                alt="Instagram"
+                />
+        </button>
       </div>
     </div>
   );
