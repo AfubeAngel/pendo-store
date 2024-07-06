@@ -2,121 +2,126 @@
   {
     "id": 1,
     "imageSrc": "/images/catalog1.png",
-    "productName": "Product 1",
-    "starRating": 4.5,
-    "price": 99.99,
-    "productDetail":"about product 1"
+    "productName": "Kilimanjaro ",
+    "starRating": 5,
+    "price": "85,000",
+    "productDetail":"Wooden living room armchair",
+    "isNew":"true"
   },
   {
     "id": 2,
     "imageSrc": "/images/catalog2.png",
-    "productName": "Product 2",
-    "starRating": 3.8,
-    "price": 79.99,
-    "productDetail":"about product 1"
+    "productName": "Kente",
+    "starRating": 4,
+    "price": "65,000",
+    "productDetail":"Deep seat cushion armchair"
   },
   {
     "id": 3,
     "imageSrc": "/images/catalog3.png",
-    "productName": "Product 3",
-    "starRating": 4.2,
-    "price": 129.99,
-    "productDetail":"about product 1"
+    "productName": "Tonga",
+    "starRating": 5,
+    "price": "100,000",
+    "productDetail":"Wooden living room armchair"
   },
   {
     "id": 4,
     "imageSrc": "/images/catalog4.png",
-    "productName": "Product 4",
-    "starRating": 4.0,
-    "price": 89.99,
-    "productDetail":"about product 1"
+    "productName": "Serengeti",
+    "starRating": 5,
+    "price": "150,000",
+    "productDetail":"Wool cushion with wooden base",
+    "isNew":"true"
   },
   {
     "id": 5,
     "imageSrc": "/images/catalog5.png",
-    "productName": "Product 5",
-    "starRating": 4.7,
-    "price": 149.99,
-    "productDetail":"about product 1"
+    "productName": "Timbuktu",
+    "starRating": 5,
+    "price": "200,000",
+    "productDetail":"Wooden living room armchair"
   },
   {
     "id": 6,
     "imageSrc": "/images/catalog6.png",
-    "productName": "Product 6",
-    "starRating": 4.3,
-    "price": 109.99,
-    "productDetail":"about product 1"
+    "productName": "Masai sofa",
+    "starRating": 5,
+    "price": "250,000",
+    "productDetail":"Soft long sofa",
+    "isNew":"true"
   },
   {
     "id": 7,
     "imageSrc": "/images/catalog7.png",
-    "productName": "Product 7",
-    "starRating": 3.9,
-    "price": 69.99,
-    "productDetail":"about product 1"
+    "productName": "Amina",
+    "starRating": 5,
+    "price": "55,000",
+    "productDetail":"Cushioned armchair"
   },
   {
     "id": 8,
     "imageSrc": "/images/catalog4.png",
-    "productName": "Product 8",
-    "starRating": 4.6,
-    "price": 119.99,
-    "productDetail":"about product 1"
+    "productName": "Oba",
+    "starRating": 5,
+    "price": "300,000",
+    "productDetail":"Soft royal elegance",
+    "isNew":"true"
   },
   {
     "id": 9,
     "imageSrc": "/images/catalog1.png",
-    "productName": "Product 9",
-    "starRating": 4.1,
-    "price": 99.99,
-    "productDetail":"about product 1"
+    "productName": "Kambili",
+    "starRating": 5,
+    "price": "45,000",
+    "productDetail":"Home elegance and practicality"
   },
   {
     "id": 10,
     "imageSrc": "/images/catalog10.png",
-    "productName": "Product 10",
-    "starRating": 4.4,
-    "price": 139.99,
-    "productDetail":"about product 1"
+    "productName": "Adunni",
+    "starRating": 4,
+    "price": "80,000",
+    "productDetail":"Modern comfort to any living space"
   },
   {
     "id": 11,
     "imageSrc": "/images/catalog11.png",
-    "productName": "Product 11",
-    "starRating": 4.8,
-    "price": 159.99,
-    "productDetail":"about product 1"
+    "productName": "Baobab",
+    "starRating": 5,
+    "price": "250,000",
+    "productDetail":"Wooden stylish and versatile seating"
   },
   {
     "id": 12,
     "imageSrc": "/images/catalog12.png",
-    "productName": "Product 12",
-    "starRating": 3.7,
-    "price": 59.99,
-    "productDetail":"about product 1"
+    "productName": "Ife",
+    "starRating": 5,
+    "price": "85,000",
+    "productDetail":"Simplicity and comfort"
   },
   {
     "id": 13,
     "imageSrc": "/images/catalog13.png",
-    "productName": "Product 13",
-    "starRating": 4.2,
-    "price": 109.99,
-    "productDetail":"about product 1"
+    "productName": "Zephyr",
+    "starRating": 5,
+    "price": "250,000",
+    "productDetail":"Wooden living room armchair"
   },
   {
     "id": 14,
     "imageSrc": "/images/catalog14.png",
-    "productName": "Product 14",
-    "starRating": 4.5,
-    "price": 119.99,
-    "productDetail":"about product 1"
+    "productName": "Olu",
+    "starRating": 5,
+    "price": "85,000",
+    "productDetail":"Seek design and supportive comfort",
+    "isNew":"true"
   },
   {
     "id": 15,
     "imageSrc": "/images/catalog15.png",
-    "productName": "Product 15",
-    "starRating": 4.6,
-    "price": 129.99,
-    "productDetail":"about product 1"
+    "productName": "Savanah",
+    "starRating": 5,
+    "price": "200,000",
+    "productDetail":"Wooden living room armchair"
   }
 ]

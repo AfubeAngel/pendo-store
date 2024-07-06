@@ -27,11 +27,11 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
     >
       {items.map((item:any, index:any) => (
         <div key={index} className="relative w-full pr-6">
-          <img src={item.imageSrc} alt={item.title} className="w-full object-cover lg:max-w-full h-[300px] lg:h-full rounded-lg " />
+          <img src={item.imageSrc} alt={item.title} className="w-[328px] object-cover lg:max-w-full h-[200px] lg:h-full rounded-lg " />
           <div className="absolute flex flex-col gap-2 lg:gap-4 items-start left-5 bottom-[-16px] lg:left-[83px] lg:bottom-[28px] 
           transform -translate-y-1/2 bg-opacity-50 text-white max-w-[250px] lg:max-w-[518px] max-h-[484px] ">
-            <h3 className="text-xl lg:text-2xl font-bold tracking-wide ">{item.title}</h3>
-            <p className="mt-2 text-xs lg:text-base font-semibold tracking-tighter lg:tracking-wide text-start ">{item.subtext}</p>
+            <h3 className="text-base lg:text-2xl font-bold tracking-wide ">{item.title}</h3>
+            <p className="mt-2 text-[8px] lg:text-base font-semibold tracking-tighter lg:tracking-wide text-start ">{item.subtext}</p>
           </div>
         </div>
       ))}

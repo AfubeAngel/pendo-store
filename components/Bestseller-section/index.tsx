@@ -1,7 +1,6 @@
 import React from "react";
 import Carousel from "./Carousel";
 import Link from "next/link";
-import Slider from "../slider";
 import Image from 'next/image';
 
 const bestsellers = [
@@ -27,8 +26,8 @@ const bestsellers = [
 
 const BestsellersSection: React.FC = () => {
   return (
-    <section className=" bg-white mt-20 xl:mt-[127px]">
-      <div className="flex justify-between items-center mb-6 xl:mb-[46px] xl:mx-[104px] 2xl:justify-center 2xl:gap-[60rem] ">
+    <section className=" bg-white mt-[71px] xl:mt-[127px]">
+      <div className="flex justify-between items-center mb-[10px] xl:mb-[46px] xl:mx-[104px] 2xl:justify-center 2xl:gap-[60rem] ">
         <h2 className="text-2xl lg:text-[32px] font-normal tracking-wide pl-4 2xl:pl-0 ">Bestsellers</h2>
         <Link href="#" className="flex font-base gap-2 text-black pr-4 2xl:pr-0">
           See all
@@ -41,7 +40,6 @@ const BestsellersSection: React.FC = () => {
         </Link>
       </div>
       <Carousel items={bestsellers} />
-      {/* <Slider items={bestsellers} /> */}
     </section>
   );
 };
