@@ -1,0 +1,18 @@
+.sliderContainer {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .sliderItem {
+    flex: 0 0 calc(70% - 24px); /* 70% width with a 24px gap */
+    margin-right: 24px;
+    position: relative;
+  }
+  
+  .sliderItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  

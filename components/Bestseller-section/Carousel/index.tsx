@@ -19,7 +19,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       showStatus={false}
       showThumbs={false}
       autoPlay={true}
-      interval={2000}
+      interval={1000}
       infiniteLoop={true}
       centerSlidePercentage={90}
       centerMode={true}

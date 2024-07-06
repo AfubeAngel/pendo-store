@@ -1,62 +1,37 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
- 
-export default function Nav() {
-  return (
-    <nav className="flex justify-between items-center p-4 lg:p-8 text-black h-20 ">
-      <div className="lg:text-[48px] text-3xl font-bold text-[#60781C] kavoon-font">pendo</div>
-      <div className="flex space-x-4">
-        <ul className="flex gap-4">
-          <li className="p-6 text-2xl">
-            <Link href="/">Home</Link>
-          </li>
-          <li className="p-6 text-2xl">
-            <Link href="/about">Shop</Link>
-          </li>
-          <li className="p-6 text-2xl">
-            <Link href="/blog/hello-world">About</Link>
-          </li>
-          <li className="p-6 text-2xl">
-            <Link href="/blog/hello-world">Contact</Link>
-          </li>
-        </ul>
-      </div>
+import React, { useState } from "react";
+import NavLinks from "./navlinks";
+import NavIcons from "./navicons";
+import Image from 'next/image';
 
-      <div className="flex space-x-4">
-        <ul className="flex gap-4 ">
-          <li>
-            <Link href="/">
-              <Image
-                src="/icons/User.svg"
-                width={24}
-                height={24}
-                alt="search icon"
-              />
-            </Link>
-          </li>
-          <li>
-            <Link href="/cart">
-              <Image
-                src="/icons/ShoppingCart.svg"
-                width={24}
-                height={24}
-                alt="cart icon"
-              />
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <Image
-                src="/icons/User.svg"
-                width={24}
-                height={24}
-                alt="profile icon"
-              />
-            </Link>
-          </li>
-        </ul>
+
+const Nav: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <nav className="flex xl:gap-[223px] items-center p-4 lg:px-8 text-black h-20 justify-between">
+      <div className="lg:text-[40px] text-3xl font-normal text-[#60781C] kavoon-font">
+        pendo
+      </div>
+      <div className="lg:hidden">
+        <button onClick={toggleMenu}>
+        <Image
+          src="/icons/mobileMenu.svg"
+          width={20}
+          height={20}
+          alt="cart icon"
+        />
+        </button>
+      </div>
+      <div className='hidden lg:flex'>
+        <NavLinks />
+        <NavIcons />
       </div>
     </nav>
   );
-}
+};
+
+export default Nav;

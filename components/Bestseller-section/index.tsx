@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from './Carousel';
 import Link from "next/link";
+import Slider from '../slider';
 
 const bestsellers = [
   {
@@ -28,6 +29,7 @@ const BestsellersSection: React.FC = () => {
         <Link href="#" className="text-blue-500">See All</Link>
       </div>
       <Carousel items={bestsellers} />
+      {/* <Slider items={bestsellers} /> */}
     </section>
   );
 };

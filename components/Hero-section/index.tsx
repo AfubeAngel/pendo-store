@@ -11,7 +11,7 @@ export default function Hero() {
       <button className="mt-4 p-4 bg-green-900 font-medium text-base text-white lg:mt-16 flex gap-4 items-center rounded w-[150px] h-14">
         Buy Now
         <Image
-          src="/icons/ChevronRightOutline.svg"
+          src="/icons/right-arrow.svg"
           width={24}
           height={24}
           alt="right-arrow"
