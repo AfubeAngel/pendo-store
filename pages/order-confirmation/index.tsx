@@ -10,7 +10,7 @@ const OrderConfirmation: React.FC = () => {
       <div className="flex flex-col items-center text-center mb-6">
         <Image src="/icons/orderconfirmed.svg" width={200} height={200} alt="search icon" />
         <h1 className="text-3xl font-bold mt-4">
-        We've got your order
+        We&apos;ve got your order
         </h1>
         <p>We’ll let your know when it ships and headed your way</p>
         <button className="bg-white border-2 border-black text-black px-4 py-2 rounded-lg hover:bg-blue-600 mt-4">
