@@ -14,7 +14,7 @@ const OrderConfirmationSummary: React.FC = () => {
               <p className="text-gray-500">Qty: 1</p>
             </div>
           </div>
-          <p className="text-lg font-semibold">${item.price.toFixed(2)}</p>
+          <p className="text-lg font-semibold">${item.price}</p>
         </div>
       ))}
     </div>
