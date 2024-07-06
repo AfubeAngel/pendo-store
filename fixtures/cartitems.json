@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "image": "/images/cart1.png",
+      "name": "Savanna Sofa",
+      "details": "Comfortable and stylish sofa",
+      "price": 499.99,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "image": "/images/cart2.png",
+      "name": "Baobab Sofa",
+      "details": "Elegant and durable sofa",
+      "price": 699.99,
+      "quantity": 2
+    },
+    {
+        "id": 3,
+        "image": "/images/cart3.png",
+        "name": "Logan Sofa",
+        "details": "Elegant and strong sofa",
+        "price": 896.99,
+        "quantity": 3
+    }
+  ]

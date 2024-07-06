@@ -36,7 +36,7 @@ export default function Nav() {
             </Link>
           </li>
           <li>
-            <Link href="/">
+            <Link href="/cart">
               <Image
                 src="/icons/ShoppingCart.svg"
                 width={24}
