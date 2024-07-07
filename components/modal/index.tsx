@@ -18,14 +18,14 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
-  if (!isOpen) return null;
-
-  const router = useRouter();
-
-  const goToCartPage = () => {
-    router.push('/cart');
-  };
-
+    const router = useRouter();
+    
+    const goToCartPage = () => {
+        router.push('/cart');
+    };
+    
+    if (!isOpen) return null;
+    
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white px-4 rounded-lg max-w-[360px] lg:h-[334px] lg:max-w-3xl">
