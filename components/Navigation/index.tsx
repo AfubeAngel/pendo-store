@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import NavLinks from "./navlinks";
 import NavIcons from "./navicons";
 import Image from 'next/image';
@@ -7,6 +8,7 @@ import Link from "next/link";
 
 const Nav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -16,8 +18,12 @@ const Nav: React.FC = () => {
     setIsOpen(false);
   };
 
+  const goToCartPage = () => {
+    router.push('/cart');
+  };
+
   return (
-    <nav className="flex xl:gap-[223px] items-center p-4 lg:px-8 text-black h-20 justify-between 2xl:justify-center 2xl:gap-[320px] bg-gray-100 ">
+    <nav className="bg-gray-100 text-black lg:w-full h-20 lg:fixed lg:top-0 lg:z-50 flex items-center justify-between xl:gap-[223px] 2xl:justify-center 2xl:gap-[320px] p-4 lg:px-8 ">
       <div className="lg:text-[40px] text-3xl font-normal text-primarycolor kavoon-font">
         pendo
       </div>
@@ -31,7 +37,7 @@ const Nav: React.FC = () => {
             alt="search icon"
           />
         </button>
-        <button>
+        <button onClick={goToCartPage}>
           <Image
             src="/icons/ShoppingCart.svg"
             width={20}
@@ -49,7 +55,7 @@ const Nav: React.FC = () => {
         </button>
       </div>
 
-      <div className='hidden lg:flex gap-[179px] '>
+      <div className='hidden lg:flex xl:gap-[179px] '>
         <NavLinks />
         <NavIcons />
       </div>

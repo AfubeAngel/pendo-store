@@ -13,8 +13,8 @@ const Cart: React.FC = () => {
   };
 
   return (
-    <section className="container mx-auto px-4 py-8">
-      <div className='flex items-center gap-8 '>
+    <section className="container mx-auto px-4 mt-[42px] lg:mt-[127px]  ">
+      <div className='flex items-center gap-8'>
       <button onClick={backHome}>
       <Image
         src="/icons/ChevronLeftOutline.svg"
@@ -23,7 +23,7 @@ const Cart: React.FC = () => {
         alt="leftarrow"
       />
       </button>
-      <h1 className="text-base lg:text-[32px] font-semibold ">Shopping Cart</h1>
+      <h1 className="text-base lg:text-[24px] font-semibold ">Shopping Cart</h1>
       </div>
       <hr className='mt-4 lg:mt-[55px] mb-[53px] lg:mb-10 '/>
       <div className="space-y-4">

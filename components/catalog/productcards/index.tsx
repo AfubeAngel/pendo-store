@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from "next/image";
 import StarRating from '../starRating';
 
@@ -9,9 +9,18 @@ interface ProductCardProps {
   starRating: number;
   price: string;
   isNew?: boolean; 
+  onClick: () => void;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ imageSrc, productName, productDetail, starRating, price, isNew }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ imageSrc, productName, productDetail, starRating, price, isNew, onClick }) => {
+  
+  const [isWishlist, setWishlist] = useState(false);
+
+  const handleWishlistClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); 
+    setWishlist(!isWishlist);
+  };
+
   return (
     <div className="bg-[#FAFAFA] flex flex-col gap-4 shadow-md rounded-lg p-4 ">
       <div className="relative">
@@ -31,9 +40,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ imageSrc, productName, produc
             className="absolute top-[21px] left-6"
           />
         )}
-        <button className="absolute top-[21px] right-6 bg-transparent border-none">
+        <button onClick={handleWishlistClick} className="absolute cursor-pointer top-[21px] right-6 bg-transparent border-none">
           <Image
-            src="/icons/wishlist.svg" 
+            src={isWishlist ? "/icons/redwishlist.svg" : "/icons/wishlist.svg"}
             width={40}
             height={40}
             alt="Add to Wishlist"

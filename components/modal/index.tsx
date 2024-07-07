@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 interface ModalProps {
   isOpen: boolean;
@@ -19,9 +20,15 @@ interface ModalProps {
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
   if (!isOpen) return null;
 
+  const router = useRouter();
+
+  const goToCartPage = () => {
+    router.push('/cart');
+  };
+
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white px-4 rounded-lg max-w-xs lg:h-[334px] lg:max-w-3xl">
+      <div className="bg-white px-4 rounded-lg max-w-[360px] lg:h-[334px] lg:max-w-3xl">
         <div className="flex flex-col lg:flex-row gap-4 relative">
         <button onClick={onClose} className="absolute right-1 lg:hidden top-3">
           <Image
@@ -37,14 +44,15 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
                 width={200}
                 height={200}
                 alt={product.productName}
-                className="object-cover rounded-2xl py-10 lg:py-[77px] w-full lg:w-[200px] "
+                className="object-cover rounded-2xl pt-[55px] pb-5 lg:py-[77px] w-[328px]  lg:w-[200px] "
               />
           </div>
 
-          <div className="border-l border-gray-300 hidden lg:block lg:mx-[47px] my-4 "></div>
+          <div className="border-l border-gray-300 hidden lg:block lg:mx-[47px] lg:my-4 "></div>
+          <hr className='block lg:hidden ' />
 
-          <div className="flex-1 flex flex-col py-7 gap-4 relative">
-          <button onClick={onClose} className="absolute hidden lg:block lg:right-7 top-6 text-xl">
+          <div className="flex-1 flex flex-col py-4 lg:py-7 gap-4 relative">
+          <button onClick={onClose} className="absolute hidden lg:block lg:right-7 top-10 text-xl">
           <Image
                 src="/icons/Vectorx-cancel.svg"
                 width={18}
@@ -65,11 +73,18 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
               </div>
             </div>
             <p className="text-lg font-semibold mr-2">N{product.price}</p>
-            <p className="text-xs max-w-[452px] ">{product.fullDetails}</p>
+            <p className="text-xs tracking-wide max-w-[452px] ">{product.fullDetails}</p>
 
-            <button className="mt-auto w-[188px] h-10 px-4 py-2 bg-primarycolor text-white rounded-lg flex items-center justify-center self-center lg:self-start">
-              <span className="mr-2">Add to Cart</span>
-              <span className="text-white text-lg font-bold">+</span>
+            <button onClick={goToCartPage} className="mt-auto w-[188px] h-10 px-4 py-2 bg-primarycolor text-white rounded-lg flex items-center justify-between self-center lg:self-start">
+              <span className="p-2 tracking-wide">Add to cart</span>
+              <span className="text-white text-lg font-bold">
+              <Image
+                src="/icons/card-plus.svg"
+                width={16}
+                height={16}
+                alt="plus icon"
+              />
+              </span>
             </button>
           </div>
         </div>
