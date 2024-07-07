@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import NavLinks from "./navlinks";
 import NavIcons from "./navicons";
 import Image from 'next/image';
+import Link from "next/link";
+
 
 const Nav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,12 +69,12 @@ const Nav: React.FC = () => {
             </button>
           </div>
           <div className="flex flex-col gap-6">
-            <a href="/" className="text-base font-medium">Home</a>
-            <a href="/" className="text-base font-medium">Shop</a>
-            <a href="/" className="text-base font-medium">About</a>
-            <a href="/" className="text-base font-medium">Contact</a>
-            <a href="/" className="text-base font-medium">Login</a>
-            <a href="/" className="text-base font-medium">Sign up</a>
+            <Link href="/" className="text-base font-medium">Home</Link>
+            <Link href="/" className="text-base font-medium">Shop</Link>
+            <Link href="/" className="text-base font-medium">About</Link>
+            <Link href="/" className="text-base font-medium">Contact</Link>
+            <Link href="/" className="text-base font-medium">Login</Link>
+            <Link href="/" className="text-base font-medium">Sign up</Link>
           </div>
         </div>
       )}

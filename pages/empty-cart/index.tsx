@@ -28,7 +28,8 @@ const Cart: React.FC = () => {
 
       <div className='p-0 flex flex-col gap-4 mx-auto justify-center items-center mt-[187px] lg:mt-[401px] mb-[228px] lg:mb-[545px] '>
         <h1 className=' text-[28px] font-semibold'>Your Cart is Empty!</h1>
-        <p className='text-xl text-center '>Looks like you haven't added anything to your cart yet. Start shopping now to see your selections here!</p>
+        <p className='text-xl text-center '>Looks like you haven&apos;t added anything to your cart yet. 
+        Start shopping now to see your selections here!</p>
       </div>
 
     </section>

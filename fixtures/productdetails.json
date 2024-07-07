@@ -51,7 +51,8 @@
     "price": "200,000",
     "productDetail":"Wooden living room armchair",
     "isNew":"false",
-    "category":"ARMLESS CHAIRS"
+    "category":"ARMLESS CHAIRS",
+    "fullDetails": "The Timbuktu chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   },
   {
     "id": 6,
@@ -61,7 +62,8 @@
     "price": "250,000",
     "productDetail":"Soft long sofa",
     "isNew":"true",
-    "category":"SOFAS"
+    "category":"SOFAS",
+    "fullDetails": "The Masai sofa chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   },
   {
     "id": 7,
@@ -71,7 +73,8 @@
     "price": "55,000",
     "productDetail":"Cushioned armchair",
     "isNew":"false",
-    "category":"SLIPPER CHAIRS"
+    "category":"SLIPPER CHAIRS",
+    "fullDetails": "The Amina chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   },
   {
     "id": 8,
@@ -80,7 +83,9 @@
     "starRating": 5,
     "price": "300,000",
     "productDetail":"Soft royal elegance",
-    "isNew":"true"
+    "isNew":"true",
+    "category":"SLIPPER CHAIRS",
+    "fullDetails": "The Oba chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   },
   {
     "id": 9,
@@ -88,7 +93,10 @@
     "productName": "Kambili",
     "starRating": 5,
     "price": "45,000",
-    "productDetail":"Home elegance and practicality"
+    "productDetail":"Home elegance and practicality",
+    "isNew":"false",
+    "category":"SOFAS",
+    "fullDetails": "The Kambili chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   },
   {
     "id": 10,
@@ -96,7 +104,10 @@
     "productName": "Adunni",
     "starRating": 4,
     "price": "80,000",
-    "productDetail":"Modern comfort to any living space"
+    "productDetail":"Modern comfort to any living space",
+    "isNew":"false",
+    "category":"ARMLESS CHAIRS",
+    "fullDetails": "The Adunni chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   },
   {
     "id": 11,
@@ -104,7 +115,10 @@
     "productName": "Baobab",
     "starRating": 5,
     "price": "250,000",
-    "productDetail":"Wooden stylish and versatile seating"
+    "productDetail":"Wooden stylish and versatile seating",
+    "isNew":"false",
+    "category":"ARMLESS CHAIRS",
+    "fullDetails": "The Baobab chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   },
   {
     "id": 12,
@@ -112,7 +126,10 @@
     "productName": "Ife",
     "starRating": 5,
     "price": "85,000",
-    "productDetail":"Simplicity and comfort"
+    "productDetail":"Simplicity and comfort",
+    "isNew":"false",
+    "category":"SLIPPER CHAIRS",
+    "fullDetails": "The Ife chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   },
   {
     "id": 13,
@@ -120,7 +137,10 @@
     "productName": "Zephyr",
     "starRating": 5,
     "price": "250,000",
-    "productDetail":"Wooden living room armchair"
+    "productDetail":"Wooden living room armchair",
+    "isNew":"false",
+    "category":"SOFAS",
+    "fullDetails": "The Zephyr chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   },
   {
     "id": 14,
@@ -129,7 +149,9 @@
     "starRating": 5,
     "price": "85,000",
     "productDetail":"Seek design and supportive comfort",
-    "isNew":"true"
+    "isNew":"true",
+    "category":"SOFAS",
+    "fullDetails": "The Olu chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   },
   {
     "id": 15,
@@ -137,6 +159,9 @@
     "productName": "Savanah",
     "starRating": 5,
     "price": "200,000",
-    "productDetail":"Wooden living room armchair"
+    "productDetail":"Wooden living room armchair",
+    "isNew":"false",
+    "category":"ARMLESS CHAIRS",
+    "fullDetails": "The Savnaha chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   }
 ]
