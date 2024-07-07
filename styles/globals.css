@@ -85,3 +85,18 @@ body {
   font-size: 12px;
   display: block;
 }
+
+/* @media (max-width: 768px) {
+  .product-grid {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+} */
+
+/* Custom styles for the product grid */
+@media (max-width: 768px) {
+  .product-grid {
+    max-height: calc((100vw - 16px) / 2 * 5); /* Adjust height to show first 5 products */
+    overflow-y: auto;
+  }
+}

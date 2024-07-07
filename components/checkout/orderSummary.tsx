@@ -16,8 +16,15 @@ const OrderSummary: React.FC = () => {
               <p className="text-gray-500">Qty: 1</p>
             </div>
           </div>
-          <p className="text-lg font-semibold">N{item.price}</p>
-          
+          <div className="flex flex-col gap-6 items-start lg:items-center">
+        <p className="text-lg font-semibold">N{item.price}</p>
+        <div className='hidden lg:flex gap-1'>
+        <button aria-label="Add to wishlist" className='flex gap-4'>
+        <Image src="/icons/delete-trash.svg" alt="delete icon" width={24} height={24} />
+        <p className="font-base font-medium">Delete</p>
+        </button>
+        </div>
+      </div>          
         </div>
       ))}
     </div>

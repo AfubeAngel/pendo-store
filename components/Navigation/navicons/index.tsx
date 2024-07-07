@@ -7,7 +7,9 @@ const NavIcons: React.FC = () => {
   return (
     <div className="flex space-x-4">
       <ul className="flex items-center gap-4">
+        <div className='hidden lg:block'>
         <SearchBar />
+        </div>
         <li>
           <Link href="/cart">
               <Image

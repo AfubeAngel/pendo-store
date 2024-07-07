@@ -22,7 +22,15 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white px-4 rounded-lg max-w-xs lg:h-[334px] lg:max-w-3xl">
-        <div className="flex flex-col lg:flex-row gap-4">
+        <div className="flex flex-col lg:flex-row gap-4 relative">
+        <button onClick={onClose} className="absolute right-1 lg:hidden top-3">
+          <Image
+                src="/icons/Vectorx-cancel.svg"
+                width={16}
+                height={16}
+                alt="Instagram"
+              />
+          </button>
           <div className="rounded-2xl">
           <Image
                 src={product.imageSrc}
@@ -36,7 +44,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
           <div className="border-l border-gray-300 hidden lg:block lg:mx-[47px] my-4 "></div>
 
           <div className="flex-1 flex flex-col py-7 gap-4 relative">
-          <button onClick={onClose} className="absolute right-1 lg:right-7 top-6 text-xl">
+          <button onClick={onClose} className="absolute hidden lg:block lg:right-7 top-6 text-xl">
           <Image
                 src="/icons/Vectorx-cancel.svg"
                 width={18}
