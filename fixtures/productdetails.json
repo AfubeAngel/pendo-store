@@ -6,7 +6,9 @@
     "starRating": 5,
     "price": "85,000",
     "productDetail":"Wooden living room armchair",
-    "isNew":"true"
+    "isNew":"true",
+    "category":"SOFAS",
+    "fullDetails": "The Kilimanjaro chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber.  "
   },
   {
     "id": 2,
@@ -14,7 +16,10 @@
     "productName": "Kente",
     "starRating": 4,
     "price": "65,000",
-    "productDetail":"Deep seat cushion armchair"
+    "productDetail":"Deep seat cushion armchair",
+    "isNew":"false",
+    "category":"ARMLESS CHAIRS",
+    "fullDetails": "The Kente chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   },
   {
     "id": 3,
@@ -22,7 +27,10 @@
     "productName": "Tonga",
     "starRating": 5,
     "price": "100,000",
-    "productDetail":"Wooden living room armchair"
+    "productDetail":"Wooden living room armchair",
+    "isNew":"false",
+    "category":"ARMLESS CHAIRS",
+    "fullDetails": "The Tonga chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   },
   {
     "id": 4,
@@ -31,7 +39,9 @@
     "starRating": 5,
     "price": "150,000",
     "productDetail":"Wool cushion with wooden base",
-    "isNew":"true"
+    "isNew":"true",
+    "category": "SLIPPER CHAIRS",
+    "fullDetails": "The Serengeti chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   },
   {
     "id": 5,
@@ -39,7 +49,9 @@
     "productName": "Timbuktu",
     "starRating": 5,
     "price": "200,000",
-    "productDetail":"Wooden living room armchair"
+    "productDetail":"Wooden living room armchair",
+    "isNew":"false",
+    "category":"ARMLESS CHAIRS"
   },
   {
     "id": 6,
@@ -48,7 +60,8 @@
     "starRating": 5,
     "price": "250,000",
     "productDetail":"Soft long sofa",
-    "isNew":"true"
+    "isNew":"true",
+    "category":"SOFAS"
   },
   {
     "id": 7,
@@ -56,7 +69,9 @@
     "productName": "Amina",
     "starRating": 5,
     "price": "55,000",
-    "productDetail":"Cushioned armchair"
+    "productDetail":"Cushioned armchair",
+    "isNew":"false",
+    "category":"SLIPPER CHAIRS"
   },
   {
     "id": 8,
