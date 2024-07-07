@@ -14,3 +14,74 @@ body {
     font-style: normal;
 }
 
+/* Custom radio button styles */
+.custom-radio {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #d1d5db; 
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.custom-radio:checked {
+  border-color: #60781C;
+}
+
+.custom-radio:checked::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #60781C;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 
+.custom-checkbox {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.custom-checkbox:checked {
+  border-color: #60781c; 
+  background-color: #60781c; 
+} */
+
+.custom-checkbox {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #d1d5db; /* default border color (gray-300) */
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-checkbox:checked {
+  border-color: #60781c;
+  background-color: #60781c;
+}
+
+.custom-checkbox:checked::before {
+  content: "✔";
+  color: white;
+  font-size: 12px;
+  display: block;
+}

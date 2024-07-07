@@ -1,17 +1,24 @@
-import React from 'react';
-import Link from 'next/link';
-import { FaArrowLeft } from 'react-icons/fa';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+
+import { FaArrowLeft } from "react-icons/fa";
 
 const CheckoutTitle: React.FC = () => {
   return (
-    <section className="flex items-center mb-4">
-      <div >
-        <Link href="/cart" className="flex items-center text-blue-500">
-          <FaArrowLeft className="mr-2" />
+    <section className="flex items-center mt-[33px] lg:mt-[136px]">
+      <div>
+        <Link href="/cart" className="flex items-center">
+          <Image
+            src="/icons/ChevronLeftOutline.svg"
+            width={40}
+            height={40}
+            alt="Instagram"
+          />
         </Link>
       </div>
-      <h1 className="text-3xl font-bold ml-4">Checkout</h1>
-      <hr className="mt-4" />
+      <h1 className="text-2xl font-semibold ml-4 px-w py-2 ">Checkout</h1>
+
     </section>
   );
 };

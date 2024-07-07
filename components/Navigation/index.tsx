@@ -16,6 +16,7 @@ const Nav: React.FC = () => {
       <div className="lg:text-[40px] text-3xl font-normal text-primarycolor kavoon-font">
         pendo
       </div>
+
       <div className="lg:hidden">
         <button onClick={toggleMenu}>
         <Image
@@ -26,7 +27,8 @@ const Nav: React.FC = () => {
         />
         </button>
       </div>
-      <div className='hidden lg:flex'>
+
+      <div className='hidden lg:flex gap-[179px] '>
         <NavLinks />
         <NavIcons />
       </div>

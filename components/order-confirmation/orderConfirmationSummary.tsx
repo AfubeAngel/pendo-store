@@ -11,10 +11,10 @@ const OrderConfirmationSummary: React.FC = () => {
             <Image src={item.image} alt={item.name} width={50} height={50} className="w-12 h-12 object-cover" />
             <div>
               <h3 className="text-lg font-semibold">{item.name}</h3>
-              <p className="text-gray-500">Qty: 1</p>
+              <p className="text-[#128E1E] ">Qty: 1</p>
             </div>
           </div>
-          <p className="text-lg font-semibold">${item.price}</p>
+          <p className="text-lg font-semibold">N{item.price}</p>
         </div>
       ))}
     </div>

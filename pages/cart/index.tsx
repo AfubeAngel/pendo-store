@@ -31,7 +31,7 @@ const Cart: React.FC = () => {
           <CartItem key={item.id} item={item} />
         ))}
       </div>
-      <div className="flex md:justify-end mt-[71px] lg:mt-[108px] ">
+      <div className="flex md:justify-end mt-[71px] lg:mt-[108px] mb-[265px] lg:mb-[344px] ">
         <CartSummary />
       </div>
     </section>

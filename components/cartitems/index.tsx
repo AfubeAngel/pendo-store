@@ -20,17 +20,12 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
         <div className='flex flex-col gap-2 w-[106px] lg:w-full'>
           <h3 className="text-[20px] font-medium">{item.name}</h3>
           <p className="text-sm">{item.details}</p>
-          <p className="text-sm font-medium"><span>Qty: </span>{item.quantity}</p>
+          <p className="text-sm font-medium text-[#128E1E] "><span>Qty: </span>{item.quantity}</p>
         </div>
       </div>
       <div className="flex flex-col gap-6 items-start lg:items-center">
         <p className="text-lg font-semibold">N{item.price}</p>
         <div className='hidden lg:flex gap-1'>
-        <button aria-label="Add to wishlist" className='flex gap-[19px] '>
-        <Image src="/icons/wishlist-blank.svg" alt="Wishlist icon" width={24} height={24} />
-        <p className="font-base font-medium">Save</p>
-        </button>
-        <p className='mx-2'>|</p>
         <button aria-label="Add to wishlist" className='flex gap-4'>
         <Image src="/icons/delete-trash.svg" alt="delete icon" width={24} height={24} />
         <p className="font-base font-medium">Delete</p>

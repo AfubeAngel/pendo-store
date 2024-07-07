@@ -22,29 +22,29 @@ const CartSummary: React.FC = () => {
   return (
     <div className="p-4 w-[360px] xl:w-[517px] ">
       <div className="flex justify-between items-center pb-2">
-        <p className="text-base">Subtotal:</p>
+        <p className="text-base">Subtotal</p>
         <p className="text-base">N{subtotal.toFixed(2)}</p>
       </div>
       <div className="flex justify-between items-center py-2">
-        <p className="text-base">Tax:</p>
+        <p className="text-base">Tax</p>
         <p className="text-base">N{tax.toFixed(2)}</p>
       </div>
       <div className="flex justify-between items-center py-2">
-        <p className="text-base">Shipping:</p>
+        <p className="text-base">Shipping</p>
         <p className="text-base">N{shipping.toFixed(2)}</p>
       </div>
       <div className="flex justify-between items-center pt-2">
-        <p className="text-base font-bold">Total:</p>
+        <p className="text-base font-bold">Total</p>
         <p className="text-base font-bold">N{total.toFixed(2)}</p>
       </div>
 
-      <div className="mt-8 flex gap-8 justify-between">
+      <div className="mt-[61px] lg:mt-8 flex flex-col items-center lg:flex-row gap-4 lg:gap-8 justify-between">
         <button
-          className="bg-white border-black flex py-[14px] lg:py-2 px-4 gap-4 items-center w-[236px] font-base tracking-wider rounded-lg h-14 text-black border"
+          className="bg-white border-black flex py-[14px] lg:py-2 px-4 gap-4 items-center w-[236px] font-base tracking-wider rounded-lg h-14 text-black border hover:bg-primarycolor "
           onClick={handleContinueShopping}
         >
           <Image
-            src="/icons/leftarrow.svg"
+            src="/icons/Leftarrow.svg"
             width={24}
             height={24}
             alt="Instagram"
@@ -52,7 +52,7 @@ const CartSummary: React.FC = () => {
           Continue shopping
         </button>
         <button
-          className="bg-primarycolor border-black flex py-[14px] lg:py-2 px-4 gap-4 items-center w-[236px] h-14 font-base tracking-wider text-white rounded-lg hover:text-primarycolor hover:bg-white"
+          className="bg-primarycolor border-black flex py-[14px] lg:py-2 px-4 gap-4 items-center w-[236px] h-14 font-base tracking-wider text-white rounded-lg hover:text-white hover:bg-black"
           onClick={handleContinueToPayment}
           >
           Continue to payment
