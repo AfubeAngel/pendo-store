@@ -38,9 +38,9 @@ const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onDeleteIte
           <p className="text-sm">{item.details}</p>
           {/* <p className="text-sm font-medium text-[#128E1E] "><span>Qty: </span>{item.quantity}</p> */}
           <div className='flex gap-2'>
-          <button onClick={decrementQuantity}><Image src="/icons/MinusCircle.svg" alt="minus icon" width={18} height={18} /></button>
+          <button onClick={decrementQuantity}><Image src="/icons/cartMinus.svg" alt="minus icon" width={18} height={18} /></button>
           <p className="text-xl leading-8 font-normal p-1 ">{item.quantity}</p>
-          <button onClick={incrementQuantity}><Image src="/icons/PlusCircle.svg" alt="plus icon" width={18} height={18} /></button>
+          <button onClick={incrementQuantity}><Image src="/icons/cartPlus.svg" alt="plus icon" width={18} height={18} /></button>
           </div>
         </div>
       </div>
