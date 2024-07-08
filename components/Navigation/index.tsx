@@ -27,7 +27,7 @@ const Nav: React.FC = () => {
   };
 
   return (
-    <nav className="bg-gray-100 text-black lg:w-full h-20 lg:fixed lg:top-0 lg:z-50 flex items-center justify-between xl:gap-[223px] 2xl:justify-center 2xl:gap-[320px] p-4 lg:px-8 ">
+    <nav className="bg-[#F5F5F5] border-b-2 border-b-[#F2F4F7] text-black lg:w-full h-20 lg:fixed lg:top-0 lg:z-50 flex items-center justify-between xl:gap-[223px] 2xl:justify-center 2xl:gap-[320px] p-4 lg:px-8 ">
       <div className="lg:text-[40px] text-3xl font-normal text-primarycolor kavoon-font">
         pendo
       </div>

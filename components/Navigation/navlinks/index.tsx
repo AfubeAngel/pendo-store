@@ -6,16 +6,16 @@ const NavLinks: React.FC = () => {
     <div className="flex space-x-4">
       <ul className="flex gap-4">
         <li className="p-6 text-base">
-          <Link className='px-4' href="/">Home</Link>
+          <Link className='px-4 hover:underline hover:text-primarycolor' href="/">Home</Link>
         </li>
         <li className="p-6 text-base">
-          <Link className='px-4' href="/shop">Shop</Link>
+          <Link className='px-4 hover:underline hover:text-primarycolor' href="/">Shop</Link>
         </li>
         <li className="p-6 text-base">
-          <Link className='px-4' href="/about">About</Link>
+          <Link className='px-4 hover:underline hover:text-primarycolor' href="/">About</Link>
         </li>
         <li className="p-6 text-base">
-          <Link className='px-4' href="/contact">Contact</Link>
+          <Link className='px-4 hover:underline hover:text-primarycolor' href="/">Contact</Link>
         </li>
       </ul>
     </div>
