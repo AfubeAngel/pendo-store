@@ -22,6 +22,10 @@ const Nav: React.FC = () => {
     router.push('/cart');
   };
 
+  const handleNavLinkClick = () => {
+    closeMenu(); 
+  };
+
   return (
     <nav className="bg-gray-100 text-black lg:w-full h-20 lg:fixed lg:top-0 lg:z-50 flex items-center justify-between xl:gap-[223px] 2xl:justify-center 2xl:gap-[320px] p-4 lg:px-8 ">
       <div className="lg:text-[40px] text-3xl font-normal text-primarycolor kavoon-font">
@@ -75,12 +79,12 @@ const Nav: React.FC = () => {
             </button>
           </div>
           <div className="flex flex-col gap-6">
-            <Link href="/" className="text-base font-medium">Home</Link>
-            <Link href="/" className="text-base font-medium">Shop</Link>
-            <Link href="/" className="text-base font-medium">About</Link>
-            <Link href="/" className="text-base font-medium">Contact</Link>
-            <Link href="/" className="text-base font-medium">Login</Link>
-            <Link href="/" className="text-base font-medium">Sign up</Link>
+            <Link href="/" className="text-base font-medium" onClick={handleNavLinkClick}>Home</Link>
+            <Link href="/" className="text-base font-medium" onClick={handleNavLinkClick}>Shop</Link>
+            <Link href="/" className="text-base font-medium" onClick={handleNavLinkClick}>About</Link>
+            <Link href="/" className="text-base font-medium" onClick={handleNavLinkClick}>Contact</Link>
+            <Link href="/" className="text-base font-medium" onClick={handleNavLinkClick}>Login</Link>
+            <Link href="/" className="text-base font-medium" onClick={handleNavLinkClick}>Sign up</Link>
           </div>
         </div>
       )}

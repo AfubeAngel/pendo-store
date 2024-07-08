@@ -77,14 +77,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
 
             <button onClick={goToCartPage} className="mt-auto w-[138px] h-10 px-4 bg-primarycolor text-white rounded-lg flex items-center justify-between ">
               <span className="p-2 tracking-wide">Add to cart</span>
-              {/* <span className="text-white text-lg font-bold">
-              <Image
-                src="/icons/card-plus.svg"
-                width={16}
-                height={16}
-                alt="plus icon"
-              />
-              </span> */}
             </button>
           </div>
         </div>

@@ -36,7 +36,6 @@ const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onDeleteIte
         <div className='flex flex-col gap-2 w-[106px] lg:w-full'>
           <h3 className="text-[20px] font-medium">{item.name}</h3>
           <p className="text-sm">{item.details}</p>
-          {/* <p className="text-sm font-medium text-[#128E1E] "><span>Qty: </span>{item.quantity}</p> */}
           <div className='flex gap-2'>
           <button onClick={decrementQuantity}><Image src="/icons/cartMinus.svg" alt="minus icon" width={18} height={18} /></button>
           <p className="text-xl leading-8 font-normal p-1 ">{item.quantity}</p>
