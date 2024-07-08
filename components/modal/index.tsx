@@ -25,7 +25,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
     };
     
     if (!isOpen) return null;
-    
+
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white px-4 rounded-lg max-w-[360px] lg:h-[334px] lg:max-w-3xl">
@@ -75,16 +75,16 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, product }) => {
             <p className="text-lg font-semibold mr-2">N{product.price}</p>
             <p className="text-xs tracking-wide max-w-[452px] ">{product.fullDetails}</p>
 
-            <button onClick={goToCartPage} className="mt-auto w-[188px] h-10 px-4 py-2 bg-primarycolor text-white rounded-lg flex items-center justify-between self-center lg:self-start">
+            <button onClick={goToCartPage} className="mt-auto w-[138px] h-10 px-4 bg-primarycolor text-white rounded-lg flex items-center justify-between ">
               <span className="p-2 tracking-wide">Add to cart</span>
-              <span className="text-white text-lg font-bold">
+              {/* <span className="text-white text-lg font-bold">
               <Image
                 src="/icons/card-plus.svg"
                 width={16}
                 height={16}
                 alt="plus icon"
               />
-              </span>
+              </span> */}
             </button>
           </div>
         </div>

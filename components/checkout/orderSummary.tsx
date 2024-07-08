@@ -13,7 +13,7 @@ const OrderSummary: React.FC = () => {
             <Image src={item.image} alt={item.name} width={50} height={50} className="w-12 h-12 object-cover" />
             <div>
               <h3 className="text-lg font-semibold">{item.name}</h3>
-              <p className="text-gray-500">Qty: 1</p>
+              <p className="text-sm font-medium text-[#128E1E] ">Qty: 1</p>
             </div>
           </div>
           <div className="flex flex-col gap-6 items-start lg:items-center">
