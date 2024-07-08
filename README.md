@@ -1,4 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Timbu Cloud Shop (pendo-shop)
+
+Welcome to the Pendo Shop project! This project is part of the HNG Internship stage 2 task, where I collaborated with a designer to bring their shop page design to life using Next.js.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It is a responsive e-commerce website that showcases products with clear descriptions and images. It includes a static checkout page and is designed to be fully responsive across different devices.
+
+## Technologies Used
+- **Next.js**: React framework for server-side rendering and static site generation.
+- **TypeScript**: Typed superset of JavaScript.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **ESLint**: Tool for identifying and fixing problems in JavaScript code.
 
 ## Getting Started
 
@@ -18,11 +27,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
 
@@ -33,8 +37,12 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Usage
+- **Navigation**: Users can navigate through the shop page and view products.
+- **Add to Cart**: Users can add products to the cart.
+- **Checkout**: Users can proceed to the static checkout page.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
+The project is deployed using [Netlify](https://www.netlify.com/). You can visit the live site [HERE](https://pendo-classy-store.netlify.app/).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
