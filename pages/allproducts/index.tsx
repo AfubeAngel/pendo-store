@@ -33,7 +33,7 @@ const AllProducts: React.FC = () => {
         const response = await axios.get('/api/fetchProducts', {
           params: {
             page: 1,
-            size: 15,
+            size: 30,
           },
         });
         setProducts(response.data.products);
