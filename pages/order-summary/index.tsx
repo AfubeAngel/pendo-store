@@ -7,6 +7,7 @@ import PaymentSummary from '@/components/checkout/paymentsummary';
 
 
 const OrderSummaryPage: React.FC = () => {
+  
   return (
     <div className="container mx-auto px-4 py-8">
       <CheckoutTitle />

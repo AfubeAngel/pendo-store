@@ -80,7 +80,7 @@ const Nav: React.FC = () => {
           </div>
           <div className="flex flex-col gap-6">
             <Link href="/" className="text-base font-medium" onClick={handleNavLinkClick}>Home</Link>
-            <Link href="/" className="text-base font-medium" onClick={handleNavLinkClick}>Shop</Link>
+            <Link href="/allproducts" className="text-base font-medium" onClick={handleNavLinkClick}>Shop</Link>
             <Link href="/" className="text-base font-medium" onClick={handleNavLinkClick}>About</Link>
             <Link href="/" className="text-base font-medium" onClick={handleNavLinkClick}>Contact</Link>
             <Link href="/" className="text-base font-medium" onClick={handleNavLinkClick}>Login</Link>

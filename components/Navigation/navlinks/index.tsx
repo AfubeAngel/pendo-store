@@ -9,7 +9,7 @@ const NavLinks: React.FC = () => {
           <Link className='px-4 hover:underline hover:text-primarycolor' href="/">Home</Link>
         </li>
         <li className="p-6 text-base">
-          <Link className='px-4 hover:underline hover:text-primarycolor' href="/">Shop</Link>
+          <Link className='px-4 hover:underline hover:text-primarycolor' href="/allproducts">Shop</Link>
         </li>
         <li className="p-6 text-base">
           <Link className='px-4 hover:underline hover:text-primarycolor' href="/">About</Link>

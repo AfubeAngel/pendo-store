@@ -6,7 +6,7 @@ import PaymentDetails from "@/components/order-confirmation/paymentdetails";
 
 const OrderConfirmation: React.FC = () => {
   return (
-    <div className="container p-4 lg:p-0 mx-auto lg:mt-[136px]">
+    <div className="container p-4 lg:p-0 mx-auto lg:mt-[136px] mb-[283px] lg:mb-[531px] ">
       <div className="flex flex-col gap-6 items-center text-center ">
         <Image src="/icons/orderconfirmed.svg" width={200} height={200} alt="search icon" />
         <div className="felx flex-col gap-4">
@@ -22,14 +22,14 @@ const OrderConfirmation: React.FC = () => {
 
       <hr className=" mt-[44px] lg:mt-[103px] mb-[71px] lg:mb-[91px] "/>
 
-      <OrderConfirmationSummary />
-
-      <hr className="mt-[66px] mb-[49px] "/>
-
-      <div className="flex flex-col lg:flex-row justify-between mb-[197px] ">
         <AddressDetails />
+
+        <hr className="mt-[66px] mb-[49px] "/>
+
+        <div className="flex justify-end">
         <PaymentDetails />
-      </div>
+        </div>
+
     </div>
   );
 };

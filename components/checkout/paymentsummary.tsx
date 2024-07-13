@@ -1,15 +1,33 @@
 import React from 'react';
 import cartSummary from '@/fixtures/cartSummary.json';
 import { useRouter } from 'next/router';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/store/store';
+import { clearCart } from '@/store/cartsummary/cartsummarySlice';
 
 const PaymentSummary: React.FC = () => {
+  const orderSummaryItems = useSelector((state: RootState) => state.cartsummary.orderSummary);
+  const dispatch = useDispatch();
+
   const router = useRouter();
-  const subtotal = cartSummary.subtotal;
-  const tax = subtotal * cartSummary.taxRate;
-  const shipping = cartSummary.shipping;
-  const total = subtotal + tax + shipping;
+      // Calculate subtotal, tax, shipping, and total based on cart items
+      const subtotal = orderSummaryItems.reduce((acc, item) => {
+        return acc + parseFloat(item.price.replace(/,/g, '')) * item.quantity;
+      }, 0);
+    
+      const tax = subtotal * 0.1;
+    
+      // Calculate shipping (15% of subtotal, free if subtotal > 100000)
+      let shipping = subtotal * 0.15;
+      if (subtotal > 80000) {
+        shipping = 0;
+      }
+    
+      const total = subtotal + tax + shipping;
+
 
   const handlePayNow = () => {
+    dispatch(clearCart());
     router.push('/order-confirmation'); 
   };
 

@@ -4,11 +4,14 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { RootState } from "@/store/store";
 import { useDispatch, useSelector } from "react-redux";
+import { saveOrderSummary } from "@/store/cartsummary/cartsummarySlice";
 
 
 const CartSummary: React.FC = () => {
   const router = useRouter();
   const cartItems = useSelector((state: RootState) => state.cart.items);
+  const dispatch = useDispatch();
+  // const cartItems = useSelector((state: RootState) => state.cart.items);
 
     // Calculate subtotal, tax, shipping, and total based on cart items
     const subtotal = cartItems.reduce((acc, item) => {
@@ -26,6 +29,7 @@ const CartSummary: React.FC = () => {
     const total = subtotal + tax + shipping;
 
   const handleContinueToPayment = () => {
+    dispatch(saveOrderSummary(cartItems)); 
     router.push("/checkout");
   };
 

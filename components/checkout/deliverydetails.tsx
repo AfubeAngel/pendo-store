@@ -1,8 +1,14 @@
 import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useDispatch } from "react-redux";
+import { saveCustomerDetails } from "@/store/customerDetails/customerDetailsSlice";
+import { useRouter } from "next/router";
+
 
 const DeliveryDetails: React.FC = () => {
+  const dispatch = useDispatch();
+
   return (
     <Formik
       initialValues={{
@@ -25,9 +31,11 @@ const DeliveryDetails: React.FC = () => {
           .required("Email address is Required"),
       })}
       onSubmit={(values: any) => {
-        console.log(values);
+        dispatch(saveCustomerDetails(values));
+        // setSubmitting(false);
       }}
     >
+      {({ isSubmitting }) => (
       <Form className="mb-0 lg:mb-[77px]">
         <h2 className="text-xl font-semibold mb-6">Billing Details</h2>
         <div className="mb-8">
@@ -144,7 +152,15 @@ const DeliveryDetails: React.FC = () => {
           Save this information for future checkouts
           </label>
         </div>
+        <button
+            type="submit"
+            className="bg-primarycolor border-black flex py-[14px] lg:py-2 px-4 gap-4 items-center w-[236px] h-14 font-base tracking-wider text-white rounded-lg hover:text-white hover:bg-black mt-8"
+            disabled={isSubmitting}
+          >
+            Save Details
+          </button>
       </Form>
+      )}
     </Formik>
   );
 };
