@@ -68,8 +68,6 @@ const Catalog: React.FC = () => {
     fullDetails: product.fullDetails,
   }));
 
-  // console.log("localproducts:", localProductDetails)
-
     // Merge the two arrays based on the product name
     const mergeProducts = (apiProducts: any[], localDetails: any[]) => {
       return apiProducts.map(apiProduct => {
@@ -86,11 +84,11 @@ const Catalog: React.FC = () => {
   
     const apiProducts = mapProducts(products);
     const mergedProducts = mergeProducts(apiProducts, localProductDetails);
-    // setFilteredProducts(mergedProducts);
 
-    console.log ("mergedprodt", mergedProducts);
-
-
+    useEffect(() => {
+      setFilteredProducts(mergedProducts);
+    }, [mergedProducts]);
+    
     const handleCategoryChange = (category: string) => {
       const filtered = mergedProducts.filter(product => product.category === category);
       setFilteredProducts(filtered);
