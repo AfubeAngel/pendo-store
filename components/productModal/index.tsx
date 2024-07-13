@@ -5,6 +5,8 @@ import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addItemToCart } from '@/store/cart/cartSlice';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface ProductModalProps {
   isOpen: boolean;
@@ -35,10 +37,19 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
         price: product.price,
         quantity: 1,
       };
-  
-      dispatch(addItemToCart(newItem));
+
+      try {
+        dispatch(addItemToCart(newItem));
+        toast.success('Item added to cart successfully!', );
         router.push('/cart');
+      } catch (error) {
+        toast.error('Failed to add item to cart. Please try again later.',);
+      }
     };
+  
+      // dispatch(addItemToCart(newItem));
+      //   router.push('/cart');
+    
     
     if (!isOpen) return null;
 
@@ -107,6 +118,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
           </div>
         </DialogPanel>
       </DialogPanel>
+      <ToastContainer />
     </Dialog>
   );
 };

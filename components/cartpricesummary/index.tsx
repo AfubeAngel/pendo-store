@@ -19,7 +19,7 @@ const CartSummary: React.FC = () => {
   
     // Calculate shipping (15% of subtotal, free if subtotal > 100000)
     let shipping = subtotal * 0.15;
-    if (subtotal > 100000) {
+    if (subtotal > 80000) {
       shipping = 0;
     }
   
@@ -30,7 +30,7 @@ const CartSummary: React.FC = () => {
   };
 
   const handleContinueShopping = () => {
-    router.push("/");
+    router.push("/allproducts");
   };
 
   return (

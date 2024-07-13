@@ -77,9 +77,9 @@ const Catalog: React.FC = () => {
         return {
           ...apiProduct,
           starRating: localDetail.starRating !== undefined ? localDetail.starRating : 4,
-          isNew: localDetail.isNew,
-          category: localDetail.category,
-          fullDetails: localDetail.fullDetails,
+          isNew: localDetail.isNew !== undefined ? localDetail.isNew : "true",
+          category: localDetail.category !== undefined ? localDetail.category : "SOFAS",
+          fullDetails: localDetail.fullDetails !== undefined ? localDetail.fullDetails : "The Serengenti chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. ",
         };
       });
     };

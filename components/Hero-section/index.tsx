@@ -5,8 +5,8 @@ import { useRouter } from "next/router";
 export default function Hero() {
   const router = useRouter();
 
-  const goToCartPage = () => {
-    router.push('/cart');
+  const goToAllProductsPage = () => {
+    router.push('/allproducts');
   };
 
   return (
@@ -20,7 +20,7 @@ export default function Hero() {
           and ergonomic mastery for a seating experience that celebrates African
           heritage sophistication and comfort in your home.
         </p>
-        <button onClick={goToCartPage} className="mt-10 p-4 bg-primarycolor font-medium text-base text-white lg:mt-16 flex justify-around items-center rounded-lg w-[150px] h-14 tracking-wide">
+        <button onClick={goToAllProductsPage} className="mt-10 p-4 bg-primarycolor font-medium text-base text-white lg:mt-16 flex justify-around items-center rounded-lg w-[150px] h-14 tracking-wide">
           Buy now
           <Image
             src="/icons/right-arrow.svg"
@@ -39,5 +39,3 @@ export default function Hero() {
     </section>
   );
 }
-
-// className="lg:w-[516px] lg:h-[605px] lg:mt-[107px]"

@@ -14,9 +14,6 @@ const OrderSummaryPage: React.FC = () => {
       <div className="grid grid-cols-1 gap-8">
         <div>
           <OrderSummary />
-           {/* <PaymentMethod />
-           <hr className='block lg:hidden mb-10' />
-          <DeliveryDetails />  */}
         </div>
         <hr className='block lg:hidden my-10' />
         <div className="flex justify-center lg:justify-end mb-[228px] lg:mb-[272px]">

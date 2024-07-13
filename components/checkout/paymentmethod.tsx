@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 const PaymentMethod: React.FC = () => {
+  const [showForm, setShowForm] = useState(false); 
+
+  const handlePaymentMethodChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setShowForm(event.target.value === "card"); 
+  };
   return (
     <section className="lg:mb-[88px] mb-10">
       <h2 className="text-base lg:text-xl font-semibold mb-8">
@@ -15,8 +22,8 @@ const PaymentMethod: React.FC = () => {
               id="card"
               name="paymentMethod"
               value="card"
-              defaultChecked
               className="mr-4 p-2 custom-radio"
+              onChange={handlePaymentMethodChange}
             />
             <label
               htmlFor="card"
@@ -32,6 +39,7 @@ const PaymentMethod: React.FC = () => {
               name="paymentMethod"
               value="pod"
               className="mr-4 p-2 custom-radio"
+              onChange={handlePaymentMethodChange}
             />
             <label
               htmlFor="pod"
@@ -56,6 +64,101 @@ const PaymentMethod: React.FC = () => {
           />
         </div>
       </div>
+
+      {showForm && ( 
+      <Formik
+      initialValues={{
+        cardname: "",
+        cardnumber: "",
+        date: "",
+        cvv: "",
+      }}
+      validationSchema={Yup.object({
+        cardname: Yup.string().required("Card name is Required"),
+        cardnumber: Yup.string().required("Card Number is Required"),
+        date: Yup.string().required("Required"),
+        cvv: Yup.string().required("Required"),
+      })}
+      onSubmit={(values: any) => {
+        console.log(values);
+      }}
+    >
+      <Form className="mb-[48px] mt-5 lg:mb-[78px] lg:mt-[56px] ">
+        <div className="mb-8">
+          <label
+            htmlFor="cardname"
+            className="block text-base font-normal text-gray-500 "
+          >
+            Card holder’s name
+          </label>
+          <Field
+            name="cardname"
+            type="text"
+            className="mt-2 p-2 block w-full h-10 shadow-sm sm:text-sm border-gray-300 rounded-lg bg-gray-100"
+          />
+          <ErrorMessage
+            name="cardname"
+            component="div"
+            className="text-red-500 text-sm"
+          />
+        </div>
+        <div className="mb-8">
+          <label
+            htmlFor="cardnumber"
+            className="block text-base font-normal text-gray-500"
+          >
+            Card number
+          </label>
+          <Field
+            name="cardnumber"
+            type="text"
+            className="mt-2 block w-full h-10  shadow-sm sm:text-sm border-gray-300 rounded-lg bg-gray-100"
+          />
+          <ErrorMessage
+            name="cardnumber"
+            component="div"
+            className="text-red-500 text-sm"
+          />
+        </div>
+        <div className="mb-8">
+          <label
+            htmlFor="date"
+            className="block text-base font-normal text-gray-500"
+          >
+            Expiration date
+          </label>
+          <Field
+            name="date"
+            type="text"
+            className="mt-2 block w-full h-10 shadow-sm sm:text-sm border-gray-300 rounded-lg bg-gray-100"
+          />
+          <ErrorMessage
+            name="date"
+            component="div"
+            className="text-red-500 text-sm"
+          />
+        </div>
+        <div className="mb-8">
+          <label
+            htmlFor="cvv"
+            className="block text-base font-normal text-gray-500"
+          >
+            CVC number
+          </label>
+          <Field
+            name="cvv"
+            type="password"
+            className="mt-2 block w-full h-10 shadow-sm sm:text-sm border-gray-300 rounded-lg bg-gray-100"
+          />
+          <ErrorMessage
+            name="cvv"
+            component="div"
+            className="text-red-500 text-sm"
+          />
+        </div>
+      </Form>
+    </Formik>
+     )}
     </section>
   );
 };
