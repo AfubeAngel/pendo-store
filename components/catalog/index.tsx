@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ProductCard from '../catalog/productcards';
-import products from '../../fixtures/productdetails.json';
+import localproducts from '../../fixtures/productdetails.json';
 import FilterUI from './filterui';
 import Modal from '../modal';
+import axios from 'axios';
+import ProductModal from '../productModal';
 
 const Catalog: React.FC = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const [products, setProducts] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const openModal = (product: any) => {
     setSelectedProduct(product);
@@ -18,6 +23,73 @@ const Catalog: React.FC = () => {
     setSelectedProduct(null);
   };
 
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get('/api/fetchProducts', {
+          params: {
+            page: 1, 
+            size: 15, 
+          }
+        });
+        setProducts(response.data.products);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+        setError('Failed to fetch products.');
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+  
+
+  const mapProducts = (products: any[]) => {
+    return products.map(product => ({
+      id: product.id,
+      name: product.name.trim(),
+      imageSrc: `https://api.timbu.cloud/images/${product.photos[0]?.url}`,
+      productName: product.name,
+      productDetail: product.description || 'No description available',
+      price: product.current_price[0].NGN[0].toLocaleString(), 
+      // starRating: 4, 
+      // isNew: new Date(product.date_created) > new Date(new Date().setDate(new Date().getDate() - 30)), 
+      onClick: () => openModal(product),
+    }));
+  };
+
+  // Map through local product details
+  const localProductDetails = localproducts.map((product: any) => ({
+    name: product.productName.trim(),
+    starRating: product.starRating || 0,
+    isNew: product.isNew === "true",
+    category: product.category,
+    fullDetails: product.fullDetails,
+  }));
+
+  // console.log("localproducts:", localProductDetails)
+
+    // Merge the two arrays based on the product name
+    const mergeProducts = (apiProducts: any[], localDetails: any[]) => {
+      return apiProducts.map(apiProduct => {
+        const localDetail = localDetails.find((p: any) => p.name === apiProduct.name) || {};
+        return {
+          ...apiProduct,
+          starRating: localDetail.starRating !== undefined ? localDetail.starRating : 4,
+          isNew: localDetail.isNew,
+          category: localDetail.category,
+          fullDetails: localDetail.fullDetails,
+        };
+      });
+    };
+  
+    const apiProducts = mapProducts(products);
+    const mergedProducts = mergeProducts(apiProducts, localProductDetails);
+
+    console.log("mergedProducts:", mergedProducts)
+
+
   return (
     <div className="container mt-[28px] mb-[74.5px] px-4 lg:px-0 lg:mb-[215px] lg:mx-auto">
       <div className="flex justify-between mb-[31.5px] lg:mb-[107px]">
@@ -27,8 +99,14 @@ const Catalog: React.FC = () => {
         </div>
       </div>
 
+
+      {loading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <p>{error}</p>
+      ) : (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-2 px-4 lg:px-[21.5px] product-grid cursor-pointer">
-        {products.map((product: any) => (
+        {mergedProducts.map((product: any) => (
           <div key={product.id} onClick={() => openModal(product)}>
             <ProductCard
               imageSrc={product.imageSrc}
@@ -42,8 +120,10 @@ const Catalog: React.FC = () => {
           </div>
         ))}
       </div>
+      )}
 
-      <Modal isOpen={isModalOpen} onClose={closeModal} product={selectedProduct || {}} />
+      {/* <Modal isOpen={isModalOpen} onClose={closeModal} product={selectedProduct || {}} /> */}
+      <ProductModal isOpen={isModalOpen} onClose={closeModal} product={selectedProduct || {}} />
     </div>
   );
 };
