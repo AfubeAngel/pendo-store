@@ -11,6 +11,7 @@ const PaymentSummary: React.FC = () => {
   const dispatch = useDispatch();
 
   const router = useRouter();
+
       // Calculate subtotal, tax, shipping, and total based on cart items
       const subtotal = orderSummaryItems.reduce((acc, item) => {
         return acc + parseFloat(item.price.replace(/,/g, '')) * item.quantity;
@@ -27,12 +28,14 @@ const PaymentSummary: React.FC = () => {
       const total = subtotal + tax + shipping;
 
       useEffect(() => {
+        console.log('Dispatching payment summary:', { subtotal, tax, shipping, total });
         dispatch(setPaymentSummary({ subtotal, tax, shipping, total }));
       }, [subtotal, tax, shipping, total, dispatch]);
     
 
     const handlePayNow = () => {
       dispatch(clearCart());
+      dispatch(setPaymentSummary({ subtotal, tax, shipping, total }));
       router.push('/order-confirmation'); 
     };
 

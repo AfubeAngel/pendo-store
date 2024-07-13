@@ -129,7 +129,6 @@ const Catalog: React.FC = () => {
       </div>
       )}
 
-      {/* <Modal isOpen={isModalOpen} onClose={closeModal} product={selectedProduct || {}} /> */}
       <ProductModal isOpen={isModalOpen} onClose={closeModal} product={selectedProduct || {}} />
     </div>
   );
