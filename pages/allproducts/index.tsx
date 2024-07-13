@@ -1,11 +1,11 @@
-// pages/allproducts.tsx
 import React, { useEffect, useState } from 'react';
-import ProductCard from '@/components/catalog/productcards';
-import localproducts from '@/fixtures/productdetails.json';
 import axios from 'axios';
 import Pagination from '@/components/pagination';
 import ProductModal from '@/components/productModal';
 import AllProductCard from '@/components/AllProductcard';
+import localproducts from '@/fixtures/productdetails.json';
+import Link from 'next/link';
+import Image from "next/image";
 
 const AllProducts: React.FC = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -14,7 +14,6 @@ const AllProducts: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
 
   const PRODUCTS_PER_PAGE = 10;
 
@@ -33,12 +32,11 @@ const AllProducts: React.FC = () => {
       try {
         const response = await axios.get('/api/fetchProducts', {
           params: {
-            page: currentPage,
-            size: PRODUCTS_PER_PAGE,
-          }
+            page: 1,
+            size: 15,
+          },
         });
         setProducts(response.data.products);
-        setTotalPages(Math.ceil(response.data.total / PRODUCTS_PER_PAGE));
         setLoading(false);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -48,7 +46,7 @@ const AllProducts: React.FC = () => {
     };
 
     fetchProducts();
-  }, [currentPage]);
+  }, []);
 
   const mapProducts = (products: any[]) => {
     return products.map(product => ({
@@ -86,11 +84,27 @@ const AllProducts: React.FC = () => {
   const apiProducts = mapProducts(products);
   const mergedProducts = mergeProducts(apiProducts, localProductDetails);
 
+  const indexOfLastProduct = currentPage * PRODUCTS_PER_PAGE;
+  const indexOfFirstProduct = indexOfLastProduct - PRODUCTS_PER_PAGE;
+  const currentProducts = mergedProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+
   return (
     <div className="container mt-[28px] mb-[74.5px] px-4 lg:px-0 lg:mt-[115px] lg:mx-auto">
-      <div className="flex justify-between mb-[31.5px] lg:mb-[107px]">
-        <h2 className="text-base lg:text-[32px] tracking-wider font-normal">All Products</h2>
+      <div className="flex items-center mt-[33px] lg:mt-[136px]">
+      <div>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/icons/ChevronLeftOutline.svg"
+            width={40}
+            height={40}
+            alt="Instagram"
+          />
+        </Link>
       </div>
+      <h1 className="text-2xl font-semibold ml-4 px-w py-2 ">Products</h1>
+    </div>
+
+    <hr className=" mt-[37px] lg:mt-[42px] mb-[36px] lg:mb-[46px]" />
 
       {loading ? (
         <p>Loading...</p>
@@ -99,7 +113,7 @@ const AllProducts: React.FC = () => {
       ) : (
         <div>
           <div className="grid grid-cols-1 gap-6 px-4 lg:px-[21.5px] product-grid cursor-pointer">
-            {mergedProducts.map((product: any) => (
+            {currentProducts.map((product: any) => (
               <div key={product.id} onClick={() => openModal(product)}>
                 <AllProductCard
                   imageSrc={product.imageSrc}
@@ -115,7 +129,7 @@ const AllProducts: React.FC = () => {
           </div>
           <Pagination
             currentPage={currentPage}
-            totalPages={totalPages}
+            totalPages={Math.ceil(mergedProducts.length / PRODUCTS_PER_PAGE)}
             onPageChange={setCurrentPage}
           />
         </div>

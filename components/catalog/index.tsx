@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import ProductCard from '../catalog/productcards';
 import localproducts from '../../fixtures/productdetails.json';
 import FilterUI from './filterui';
-import Modal from '../modal';
 import axios from 'axios';
 import ProductModal from '../productModal';
 
@@ -12,6 +11,7 @@ const Catalog: React.FC = () => {
   const [products, setProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [filteredProducts, setFilteredProducts] = useState<any[]>([]);
 
   const openModal = (product: any) => {
     setSelectedProduct(product);
@@ -86,8 +86,15 @@ const Catalog: React.FC = () => {
   
     const apiProducts = mapProducts(products);
     const mergedProducts = mergeProducts(apiProducts, localProductDetails);
+    // setFilteredProducts(mergedProducts);
 
-    console.log("mergedProducts:", mergedProducts)
+    console.log ("mergedprodt", mergedProducts);
+
+
+    const handleCategoryChange = (category: string) => {
+      const filtered = mergedProducts.filter(product => product.category === category);
+      setFilteredProducts(filtered);
+    };
 
 
   return (
@@ -95,7 +102,7 @@ const Catalog: React.FC = () => {
       <div className="flex justify-between mb-[31.5px] lg:mb-[107px]">
         <h2 className="text-base lg:text-[32px] tracking-wider font-normal">Catalog</h2>
         <div className="hidden lg:flex">
-          <FilterUI />
+          <FilterUI onCategoryChange={handleCategoryChange}  />
         </div>
       </div>
 

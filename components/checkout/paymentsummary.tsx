@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import cartSummary from '@/fixtures/cartSummary.json';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
 import { clearCart } from '@/store/cartsummary/cartsummarySlice';
+import { setPaymentSummary } from '@/store/paymentsummary/paymentsummarySlice';
 
 const PaymentSummary: React.FC = () => {
   const orderSummaryItems = useSelector((state: RootState) => state.cartsummary.orderSummary);
@@ -25,11 +26,15 @@ const PaymentSummary: React.FC = () => {
     
       const total = subtotal + tax + shipping;
 
+      useEffect(() => {
+        dispatch(setPaymentSummary({ subtotal, tax, shipping, total }));
+      }, [subtotal, tax, shipping, total, dispatch]);
+    
 
-  const handlePayNow = () => {
-    dispatch(clearCart());
-    router.push('/order-confirmation'); 
-  };
+    const handlePayNow = () => {
+      dispatch(clearCart());
+      router.push('/order-confirmation'); 
+    };
 
   return (
     <div className=" p-4 w-full max-w-sm">

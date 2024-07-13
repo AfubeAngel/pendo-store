@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Image from "next/image";
-import StarRating from '../catalog/starRating';
 
 interface AllProductCardProps {
   imageSrc: string;
@@ -13,24 +12,17 @@ interface AllProductCardProps {
 }
 
 const AllProductCard: React.FC<AllProductCardProps> = ({ imageSrc, productName, productDetail, starRating, price, isNew, onClick }) => {
-  
-  const [isWishlist, setWishlist] = useState(false);
-
-  const handleWishlistClick = (e: React.MouseEvent) => {
-    e.stopPropagation(); 
-    setWishlist(!isWishlist);
-  };
 
   return (
         <div className="flex justify-between py-4 border-b w-full">
-          <div className="flex space-x-6 lg:space-x-[50px] ">
+          <div className="flex space-x-3 lg:space-x-4 ">
             <Image src={imageSrc} alt={productName} width={100} height={100} className="w-[100px] h-[100px] object-cover" />
-            <div>
+            <div className='flex flex-col justify-end'>
               <h3 className="text-lg font-semibold">{productName}</h3>
-              <p className="text-sm font-medium text-[#128E1E] ">Qty: 1</p>
+              <p className="text-sm font-normal">{productDetail}</p>
             </div>
           </div>
-        <p className="text-lg font-semibold">N{price}</p>
+        <p className="text-lg font-semibold self-end">N{price}</p>
         </div>
   );
 };

@@ -5,21 +5,23 @@ import { useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
 
 const PaymentDetails: React.FC = () => {
-  const orderSummaryItems = useSelector((state: RootState) => state.cartsummary.orderSummary);
+  // const orderSummaryItems = useSelector((state: RootState) => state.cartsummary.orderSummary);
+  const { subtotal, tax, shipping, total } = useSelector((state: RootState) => state.paymentsummary);
+
   
-  const subtotal = orderSummaryItems.reduce((acc, item) => {
-    return acc + parseFloat(item.price.replace(/,/g, '')) * item.quantity;
-  }, 0);
+  // const subtotal = orderSummaryItems.reduce((acc, item) => {
+  //   return acc + parseFloat(item.price.replace(/,/g, '')) * item.quantity;
+  // }, 0);
       
-  const tax = subtotal * 0.1;
+  // const tax = subtotal * 0.1;
       
-  // Calculate shipping (15% of subtotal, free if subtotal > 100000)
-  let shipping = subtotal * 0.15;
-  if (subtotal > 80000) {
-    shipping = 0;
-  }
+  // // Calculate shipping (15% of subtotal, free if subtotal > 100000)
+  // let shipping = subtotal * 0.15;
+  // if (subtotal > 80000) {
+  //   shipping = 0;
+  // }
       
-  const total = subtotal + tax + shipping;
+  // const total = subtotal + tax + shipping;
 
 
   return (

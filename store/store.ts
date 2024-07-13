@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import cartReducer from './cart/cartSlice';
 import cartsummaryReducer from './cartsummary/cartsummarySlice';
 import customerDetailsReducer from './customerDetails/customerDetailsSlice';
+import paymentsummaryReducer from './paymentsummary/paymentsummarySlice';
 
 
 export const store = configureStore({
@@ -9,6 +10,7 @@ export const store = configureStore({
     cart: cartReducer,
     cartsummary: cartsummaryReducer,
     customerDetails: customerDetailsReducer, 
+    paymentsummary: paymentsummaryReducer,
   
   },
 });

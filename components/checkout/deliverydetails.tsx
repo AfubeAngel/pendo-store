@@ -154,10 +154,10 @@ const DeliveryDetails: React.FC = () => {
         </div>
         <button
             type="submit"
-            className="bg-primarycolor border-black flex py-[14px] lg:py-2 px-4 gap-4 items-center w-[236px] h-14 font-base tracking-wider text-white rounded-lg hover:text-white hover:bg-black mt-8"
+            className="bg-white border border-black flex py-[14px] lg:py-2 px-4 gap-4 justify-center items-center w-[150px] h-14 font-base tracking-wider text-black rounded-lg hover:text-black hover:bg-white mt-8"
             disabled={isSubmitting}
           >
-            Save Details
+            Submit
           </button>
       </Form>
       )}
