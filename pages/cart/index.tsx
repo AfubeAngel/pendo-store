@@ -3,68 +3,23 @@ import CartItem from '@/components/cartitems';
 import CartSummary from '@/components/cartpricesummary';
 import Image from "next/image";
 import { useRouter } from 'next/router';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/store/store';
+import { deleteItem, updateQuantity } from '@/store/cart/cartSlice';
 
-// initial cart items
-const initialCartItems = [
-  {
-    "id": 1,
-    "image": "/images/cart1.png",
-    "name": "Savanna Sofa",
-    "details": "Comfortable and stylish sofa",
-    "price": "250,000",
-    "quantity": 1
-  },
-  {
-    "id": 2,
-    "image": "/images/cart2.png",
-    "name": "Baobab Sofa",
-    "details": "Elegant and durable sofa",
-    "price": "300,000",
-    "quantity": 2
-  },
-  {
-    "id": 3,
-    "image": "/images/cart3.png",
-    "name": "Logan Sofa",
-    "details": "Elegant and strong sofa",
-    "price": "65,000",
-    "quantity": 1
-  },
-  {
-    "id": 4,
-    "image": "/images/cart4.png",
-    "name": "Serengeti",
-    "details": "Wool cushion with wooden base",
-    "price": "65,000",
-    "quantity": 1
-  },
-  {
-    "id": 5,
-    "image": "/images/cart5.png",
-    "name": "Timbuktu",
-    "details": "Wooden living room armchair",
-    "price": "65,000",
-    "quantity": 2
-  }
-];
 
 const Cart: React.FC = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state: RootState) => state.cart.items);
 
-  const [cartItems, setCartItems] = useState(initialCartItems);
-
-  const handleUpdateQuantity = (id: number, newQuantity: number) => {
-    const updatedCartItems = cartItems.map(item =>
-      item.id === id ? { ...item, quantity: newQuantity } : item
-    );
-    setCartItems(updatedCartItems);
+  const handleUpdateQuantity = (id: string, newQuantity: number) => {
+    dispatch(updateQuantity({ id, quantity: newQuantity }));
   };
 
-  const handleDeleteItem = (id: number) => {
-    const updatedCartItems = cartItems.filter(item => item.id !== id);
-    setCartItems(updatedCartItems);
+  const handleDeleteItem = (id: string) => {
+    dispatch(deleteItem(id));
   };
-
 
   const backHome = () => {
     router.push('/');
@@ -84,19 +39,29 @@ const Cart: React.FC = () => {
         <h1 className="text-base lg:text-[24px] font-semibold">Shopping Cart</h1>
       </div>
       <hr className='mt-4 lg:mt-[55px] mb-[53px] lg:mb-10' />
-      <div className="space-y-4">
-        {cartItems.map((item) => (
-          <CartItem
-            key={item.id}
-            item={item}
-            onUpdateQuantity={handleUpdateQuantity}
-            onDeleteItem={handleDeleteItem}
-          />
-        ))}
-      </div>
-      <div className="flex md:justify-end mt-[71px] lg:mt-[108px] mb-[265px] lg:mb-[344px]">
-        <CartSummary />
-      </div>
+      {cartItems.length === 0 ? (
+        <div className='p-0 flex flex-col gap-4 mx-auto justify-center items-center mt-[187px] lg:mt-[401px] mb-[228px] lg:mb-[545px] '>
+          <h1 className=' text-[28px] font-semibold'>Your Cart is Empty!</h1>
+          <p className='text-xl text-center '>Looks like you haven&apos;t added anything to your cart yet. 
+          Start shopping now to see your selections here!</p>
+        </div>
+      ) : (
+        <>
+          <div className="space-y-4">
+            {cartItems.map((item) => (
+              <CartItem
+                key={item.id}
+                item={item}
+                onUpdateQuantity={handleUpdateQuantity}
+                onDeleteItem={handleDeleteItem}
+              />
+            ))}
+          </div>
+          <div className="flex md:justify-end mt-[71px] lg:mt-[108px] mb-[265px] lg:mb-[344px]">
+            <CartSummary />
+          </div>
+        </>
+      )}
     </section>
   );
 };

@@ -3,15 +3,15 @@ import Image from 'next/image';
 
 interface CartItemProps {
   item: {
-    id: number;
+    id: string;
     image: string;
     name: string;
     details: string;
     price: string;
     quantity: number;
   };
-  onUpdateQuantity: (id: number, newQuantity: number) => void;
-  onDeleteItem: (id: number) => void;
+  onUpdateQuantity: (id: string, newQuantity: number) => void;
+  onDeleteItem: (id: string) => void;
 }
 
 const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onDeleteItem  }) => {
@@ -21,7 +21,7 @@ const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onDeleteIte
   };
 
   const decrementQuantity = () => {
-    if (item.quantity > 0) {
+    if (item.quantity > 1) {
       onUpdateQuantity(item.id, item.quantity - 1);
     }
   };
@@ -29,6 +29,9 @@ const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onDeleteIte
   const handleDelete = () => {
     onDeleteItem(item.id);
   };
+
+  const totalPrice = (parseFloat(item.price.replace(/,/g, '')) * item.quantity).toFixed(2);
+
   return (
     <section className="flex justify-between items-start lg:items-center pb-6 border-b">
       <div className="flex space-x-4 lg:space-x-[50px]">
@@ -44,7 +47,7 @@ const CartItem: React.FC<CartItemProps> = ({ item, onUpdateQuantity, onDeleteIte
         </div>
       </div>
       <div className="flex flex-col gap-6 items-start lg:items-center">
-        <p className="text-lg font-semibold">N{item.price}</p>
+        <p className="text-lg font-semibold">N{totalPrice}</p>
         <div className='hidden lg:flex gap-1'>
         <button aria-label="Add to wishlist" className='flex gap-4' onClick={handleDelete}>
         <Image src="/icons/delete-trash.svg" alt="delete icon" width={24} height={24} />

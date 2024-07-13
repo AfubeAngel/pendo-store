@@ -3,11 +3,14 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { addItemToCart } from '@/store/cart/cartSlice';
 
 interface ProductModalProps {
   isOpen: boolean;
   onClose: () => void;
   product: {
+    id: string,
     imageSrc: string;
     productName: string;
     productDetail: string;
@@ -21,8 +24,19 @@ interface ProductModalProps {
 
 const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product }) => {
     const router = useRouter();
+    const dispatch = useDispatch();
     
-    const goToCartPage = () => {
+    const addToCartPage = () => {
+      const newItem = {
+        id: product.id,
+        image: product.imageSrc,
+        name: product.productName,
+        details: product.productDetail,
+        price: product.price,
+        quantity: 1,
+      };
+  
+      dispatch(addItemToCart(newItem));
         router.push('/cart');
     };
     
@@ -84,7 +98,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ isOpen, onClose, product })
               <p className="text-xs tracking-wide max-w-[452px] ">{product.fullDetails}</p>
 
               <button
-                onClick={goToCartPage}
+                onClick={addToCartPage}
                 className="mt-auto w-[138px] h-10 px-4 bg-primarycolor text-white rounded-lg flex items-center justify-between "
               >
                 <span className="p-2 tracking-wide">Add to cart</span>
