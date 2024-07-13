@@ -163,5 +163,171 @@
     "isNew":"false",
     "category":"ARMLESS CHAIRS",
     "fullDetails": "The Savnaha chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+    "id": 16,
+    "imageSrc": "/images/catalog1.png",
+    "productName": "Ifo",
+    "starRating": 5,
+    "price": "200,000",
+    "productDetail":"Traditionally beautiful",
+    "isNew":"false",
+    "category":"SOFAS",
+    "fullDetails": "The Ifo chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+    "id": 17,
+    "imageSrc": "/images/catalog1.png",
+    "productName": "Zephrayl",
+    "starRating": 4,
+    "price": "60,000",
+    "productDetail":"Lovely design and texture for you",
+    "isNew":"false",
+    "category":"ARMLESS CHAIRS",
+    "fullDetails": "The Zephrayl chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+    "id": 18,
+    "imageSrc": "/images/catalog1.png",
+    "productName": "Savannoh",
+    "starRating": 4,
+    "price": "70,000",
+    "productDetail":"exquisite design",
+    "isNew":"true",
+    "category":"SLIPPER CHAIRS",
+    "fullDetails": "The Savannoh chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+    "id": 19,
+    "imageSrc": "/images/catalog1.png",
+    "productName": "Ola chair",
+    "starRating": 5,
+    "price": "80,000",
+    "productDetail":"exquisite design",
+    "isNew":"false",
+    "category":"SOFAS",
+    "fullDetails": "The Ola chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+    "id": 20,
+    "imageSrc": "/images/catalog1.png",
+    "productName": "Amino",
+    "starRating": 4,
+    "price": "80,000",
+    "productDetail":"Lovely color and texture",
+    "isNew":"false",
+    "category":"ARMLESS CHAIRS",
+    "fullDetails": "The Amino chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+    "id": 21,
+    "imageSrc": "/images/catalog1.png",
+    "productName": "Charlotte",
+    "starRating": 4,
+    "price": "90,000",
+    "productDetail":"Timeless piece",
+    "isNew":"false",
+    "category":"SLIPPER CHAIRS",
+    "fullDetails": "The Charlotte chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+    "id": 22,
+    "imageSrc": "/images/catalog1.png",
+    "productName": "Babbab",
+    "starRating": 5,
+    "price": "90,000",
+    "productDetail":"smooth texture and feel",
+    "isNew":"false",
+    "category":"SOFAS",
+    "fullDetails": "The Babbab chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+    "id": 23,
+    "imageSrc": "/images/catalog1.png",
+    "productName": "Adunno",
+    "starRating": 5,
+    "price": "100,000",
+    "productDetail":"Best texture with breathable material",
+    "isNew":"false",
+    "category":"ARMLESS CHAIRS",
+    "fullDetails": "The Adunno chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+    "id": 24,
+    "imageSrc": "/images/catalog1.png",
+    "productName": "Kento",
+    "starRating": 4,
+    "price": "120,000",
+    "productDetail":"Excellent design",
+    "isNew":"true",
+    "category":"SLIPPER CHAIRS",
+    "fullDetails": "The Kento chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+    "id": 25,
+    "imageSrc": "/images/catalog2.png",
+    "productName": "Miasona",
+    "productDetail": "Best product for your space",
+    "price": "140,000",
+    "starRating": 5,
+    "isNew": "true",
+    "category": "SOFAS",
+    "fullDetails": "The Miasona chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+    "id": 26,
+    "imageSrc": "/images/catalog4.png",
+    "productName": "Eleanor sofa",
+    "productDetail": "A luxurious velvet sofa ",
+    "price": "150,000",
+    "starRating": 5,
+    "isNew": "false",
+    "category": "ARMLESS CHAIRS",
+    "fullDetails": "The Eleanor sofa is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+      "id": 27,
+      "imageSrc": "/images/catalog4.png",
+      "productName": "Victoria chair",
+      "productDetail": "A polished finish and contemporary design",
+      "price": "200,000",
+      "starRating": 4,
+      "isNew": "flase",
+      "category": "SLIPPER CHAIRS",
+      "fullDetails": "The Victoria chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+      "id": 28,
+      "imageSrc": "/images/catalog5.png",
+      "productName": "Regal ",
+      "productDetail": "A classic leather armchair",
+      "price": "230,000",
+      "starRating": 5,
+      "isNew": "false",
+      "category": "SOFAS",
+      "fullDetails": "The Regal chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+      "id": 29,
+      "imageSrc": "/images/catalog5.png",
+      "productName": "Serengotti",
+      "productDetail": "Traditional elegance",
+      "price": "274,000",
+      "starRating": 5,
+      "isNew": "false",
+      "category": "ARMLESS CHAIRS",
+      "fullDetails": "The Serengotti chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
+  },
+  {
+      "id": 30,
+      "name": "Timbula",
+      "imageSrc": "/images/catalog7.png",
+      "productName": "Timbula",
+      "productDetail": "lovely traditional design",
+      "price": "340,000",
+      "starRating": 5,
+      "isNew": "false",
+      "category": "SLIPPER CHAIRS",
+      "fullDetails": "The Timbula chair is characterized by its artistic and organic shape. The chair has two main components: a large, sweeping backrest and a contoured seat, both crafted from polished wood with rich, warm tones varying from golden yellow to deep amber. "
   }
 ]
