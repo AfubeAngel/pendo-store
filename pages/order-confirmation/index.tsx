@@ -8,7 +8,7 @@ const OrderConfirmation: React.FC = () => {
   return (
     <div className="container p-4 lg:p-0 mx-auto lg:mt-[136px] mb-[283px] lg:mb-[531px] ">
       <div className="flex flex-col gap-6 items-center text-center ">
-        <Image src="/icons/orderconfirmed.svg" width={200} height={200} alt="search icon" />
+        <Image src="/icons/orderconfirmed.svg" width={120} height={120} alt="search icon" />
         <div className="felx flex-col gap-4">
         <h1 className="lg:text-[40px] font-normal">
         We&apos;ve got your order
