@@ -81,18 +81,37 @@ const Catalog: React.FC = () => {
         };
       });
     };
-  
-    const apiProducts = mapProducts(products);
-    const mergedProducts = mergeProducts(apiProducts, localProductDetails);
 
     useEffect(() => {
+      const apiProducts = mapProducts(products);
+      const mergedProducts = mergeProducts(apiProducts, localProductDetails);
       setFilteredProducts(mergedProducts);
-    }, [mergedProducts]);
-    
+    }, [products]);
+
     const handleCategoryChange = (category: string) => {
-      const filtered = mergedProducts.filter(product => product.category === category);
-      setFilteredProducts(filtered);
+      const apiProducts = mapProducts(products);
+      const mergedProducts = mergeProducts(apiProducts, localProductDetails);
+  
+      if (category) {
+        const filtered = mergedProducts.filter(product => product.category === category);
+        setFilteredProducts(filtered);
+      } else {
+        setFilteredProducts(mergedProducts);
+      }
     };
+  
+  
+    // const apiProducts = mapProducts(products);
+    // const mergedProducts = mergeProducts(apiProducts, localProductDetails);
+
+    // useEffect(() => {
+    //   setFilteredProducts(mergedProducts);
+    // }, [mergedProducts]);
+    
+    // const handleCategoryChange = (category: string) => {
+    //   const filtered = mergedProducts.filter(product => product.category === category);
+    //   setFilteredProducts(filtered);
+    // };
 
 
   return (
@@ -111,7 +130,7 @@ const Catalog: React.FC = () => {
         <p>{error}</p>
       ) : (
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-2 px-4 lg:px-[21.5px] product-grid cursor-pointer">
-        {mergedProducts.map((product: any) => (
+        {filteredProducts.map((product: any) => (
           <div key={product.id} onClick={() => openModal(product)}>
             <ProductCard
               imageSrc={product.imageSrc}
